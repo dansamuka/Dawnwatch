@@ -49,6 +49,15 @@
       "url": "https://www.the-star.co.ke/sports/2020-03-27-businessman-arrested-over-fraudulent-greenhouse-deal",
       "published_at": "2020-03-27T09:45:00+03:00",
       "title": "Businessman arrested over fraudulent greenhouse deal"
+    },
+    {
+      "source_id": "standard-goldenscape-2020-03-21",
+      "source_name": "The Standard / FarmKenya",
+      "source_tier": "B",
+      "url": "https://www.standardmedia.co.ke/farmkenya/article/2001365023/how-to-avoid-get-rich-quick-schemes-and-other-agri-scams",
+      "published_at": "2020-03-21T00:00:00+03:00",
+      "observed_at": "2020-03-21T00:00:00+03:00",
+      "title": "How to avoid get-rich-quick schemes and other agri scams"
     }
   ],
   "indicator_events": [
@@ -132,6 +141,16 @@
         "bd-goldenscape-2021-03-18"
       ],
       "note": "Criminal charge and later asset-recovery litigation."
+    },
+    {
+      "stage": "INDEPENDENT_MODEL_SCRUTINY",
+      "started_at": "2020-03-21T00:00:00+03:00",
+      "ended_at": null,
+      "first_documented_at": "2020-03-21T00:00:00+03:00",
+      "source_ids": [
+        "standard-goldenscape-2020-03-21"
+      ],
+      "note": "Agricultural-economics analysis questioned fixed agricultural profit promises and the hands-off farming model after investor payment problems had become public."
     }
   ],
   "impact_estimates": [
@@ -177,7 +196,8 @@
     }
   ],
   "notes": [
-    "The case combines criminal allegations and civil asset-recovery proceedings; Dawnwatch preserves those distinctions."
+    "The case combines criminal allegations and civil asset-recovery proceedings; Dawnwatch preserves those distinctions.",
+    "P1B adds domain-expert scrutiny but does not move the benchmark earlier because the analysis followed the first seeded payment-failure report."
   ],
   "benchmark_definition": {
     "benchmark_kind": "enforcement_lead",
