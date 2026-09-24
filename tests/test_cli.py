@@ -28,3 +28,20 @@ def test_benchmark_all_cli(monkeypatch, capsys) -> None:
     assert len(output) == 5
     results = {item["case_id"]: item for item in output}
     assert results["kenya-cbex-2026"]["lead_time_days"] == 512
+
+
+def test_validate_controls_cli(monkeypatch, capsys) -> None:
+    monkeypatch.setattr("sys.argv", ["dawnwatch", "validate-controls"])
+    main()
+    output = json.loads(capsys.readouterr().out)
+    assert output["valid"] is True
+    assert output["control_count"] == 10
+
+
+def test_benchmark_controls_cli(monkeypatch, capsys) -> None:
+    monkeypatch.setattr("sys.argv", ["dawnwatch", "benchmark-controls"])
+    main()
+    output = json.loads(capsys.readouterr().out)
+    assert len(output) == 10
+    assert all(item["risk_false_positive"] is False for item in output)
+    assert all(item["discovery_false_positive"] is False for item in output)
