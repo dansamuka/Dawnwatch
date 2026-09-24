@@ -178,5 +178,11 @@
   ],
   "notes": [
     "The case combines criminal allegations and civil asset-recovery proceedings; Dawnwatch preserves those distinctions."
-  ]
+  ],
+  "benchmark_definition": {
+    "benchmark_kind": "enforcement_lead",
+    "target_state": "ELEVATED CAUTION",
+    "milestone_type": "DCI_ARREST",
+    "interpretation": "Public payment-failure/high-return warning to DCI arrest; not a pre-loss benchmark."
+  }
 }
