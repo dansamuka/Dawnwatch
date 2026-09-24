@@ -1,0 +1,119 @@
+{
+  "case_id": "kenya-bitstream-circle-2022",
+  "canonical_name": "Bitstream Circle",
+  "aliases": [
+    "Bitstream Circle Limited"
+  ],
+  "jurisdiction": "Kenya",
+  "category": [
+    "crypto",
+    "ponzi",
+    "telegram",
+    "high-return-investment"
+  ],
+  "active_from": "2021-11-01T00:00:00+03:00",
+  "active_to": "2022-03-13T00:00:00+03:00",
+  "outcome_status": "collapsed",
+  "archive_quality": "archive-complete",
+  "benchmark_eligible": false,
+  "sources": [
+    {
+      "source_id": "kw-bitstream-2022-03-21",
+      "source_name": "The Kenyan Wall Street",
+      "source_tier": "B",
+      "url": "https://kenyanwallstreet.com/bitstream-circle-is-seen-as-a-scam-although-early-investors-have-dismissed-these-allegations",
+      "published_at": "2022-03-21T00:00:00+03:00",
+      "title": "Chinese Cryptocurrency Scam Bitstream Circle hits Kenyans"
+    },
+    {
+      "source_id": "dci-crypto-mag-2024",
+      "source_name": "Directorate of Criminal Investigations",
+      "source_tier": "A",
+      "url": "https://www.dci.go.ke/sites/default/files/2024-05/The%20DCI%20Magazine%20April%202024%209th%20Edition.pdf",
+      "published_at": "2024-04-01T00:00:00+03:00",
+      "title": "Cryptocurrency Fraud in Kenya / DCI Magazine"
+    }
+  ],
+  "indicator_events": [
+    {
+      "observed_at": "2022-03-21T00:00:00+03:00",
+      "indicator": "EXTREME_RETURN",
+      "confirmed": true,
+      "confidence": 1,
+      "source_ids": [
+        "kw-bitstream-2022-03-21"
+      ],
+      "note": "Reporting described promised daily returns in the 5-10% range."
+    },
+    {
+      "observed_at": "2022-03-21T00:00:00+03:00",
+      "indicator": "WIDESPREAD_WITHDRAWAL_FAILURE",
+      "confirmed": true,
+      "confidence": 1,
+      "source_ids": [
+        "kw-bitstream-2022-03-21"
+      ],
+      "note": "The scheme had already stopped paying/allowed withdrawals by the time of the report."
+    },
+    {
+      "observed_at": "2022-03-21T00:00:00+03:00",
+      "indicator": "CRYPTO_ONLY_PAYMENT",
+      "confirmed": true,
+      "confidence": 0.9,
+      "source_ids": [
+        "kw-bitstream-2022-03-21"
+      ],
+      "note": "The scheme centered on crypto/USDT investment."
+    }
+  ],
+  "milestones": [
+    {
+      "milestone_type": "WITHDRAWAL_FAILURE_AND_COLLAPSE",
+      "occurred_at": "2022-03-13T00:00:00+03:00",
+      "first_documented_at": "2022-03-21T00:00:00+03:00",
+      "source_ids": [
+        "kw-bitstream-2022-03-21"
+      ],
+      "note": "Reports place the withdrawal failure/collapse around 13 March 2022."
+    }
+  ],
+  "lifecycle_stages": [
+    {
+      "stage": "RAPID_RECRUITMENT",
+      "started_at": "2021-11-01T00:00:00+03:00",
+      "ended_at": "2022-03-13T00:00:00+03:00",
+      "first_documented_at": "2022-03-21T00:00:00+03:00",
+      "source_ids": [
+        "kw-bitstream-2022-03-21"
+      ],
+      "note": "The UK-registered entity recruited heavily through crypto communities."
+    },
+    {
+      "stage": "WITHDRAWAL_FAILURE",
+      "started_at": "2022-03-13T00:00:00+03:00",
+      "ended_at": null,
+      "first_documented_at": "2022-03-21T00:00:00+03:00",
+      "source_ids": [
+        "kw-bitstream-2022-03-21"
+      ],
+      "note": "Investors reported being unable to withdraw."
+    }
+  ],
+  "impact_estimates": [
+    {
+      "metric": "reported_loss",
+      "value": 1180000000,
+      "unit": "KES",
+      "confidence": "medium",
+      "as_of": "2024-04-01T00:00:00+03:00",
+      "source_ids": [
+        "dci-crypto-mag-2024"
+      ],
+      "note": "DCI magazine describes approximately USD10 million / roughly KSh1.18 billion lost."
+    }
+  ],
+  "legal_events": [],
+  "notes": [
+    "A later source says Techspace Africa warned about Bitstream before collapse, but the original warning date has not yet been independently recovered; benchmark_eligible therefore remains false."
+  ]
+}
