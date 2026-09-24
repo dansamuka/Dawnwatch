@@ -16,7 +16,7 @@ dependencies = [
   "alembic>=1.13,<2",
 ]
 
-[project.optional-dependencies]
+[project.scripts]\ndawnwatch = "dawnwatch.cli:main"\n\n[project.optional-dependencies]
 dev = [
   "pytest>=8.3,<9",
   "httpx>=0.27,<1",
