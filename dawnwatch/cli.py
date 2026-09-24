@@ -6,6 +6,7 @@ from datetime import datetime
 
 from dawnwatch.archive import default_archive
 from dawnwatch.benchmark import benchmark_archive
+from dawnwatch.controls import control_quality_issues, default_controls
 from dawnwatch.history import lead_time_days, quality_issues, replay_case
 from dawnwatch.models import RiskState
 
@@ -23,6 +24,9 @@ def build_parser() -> argparse.ArgumentParser:
     subparsers.add_parser("archive-stats", help="Summarize the historical archive")
     subparsers.add_parser("validate-archive", help="Validate every historical case")
     subparsers.add_parser("benchmark-all", help="Run all benchmark-eligible cases")
+    subparsers.add_parser("control-stats", help="Summarize the matched control cohort")
+    subparsers.add_parser("validate-controls", help="Validate every matched control")
+    subparsers.add_parser("benchmark-controls", help="Run control false-positive assessments")
 
     replay = subparsers.add_parser("replay", help="Replay a historical case as of a date")
     replay.add_argument("case_id")
@@ -39,6 +43,7 @@ def build_parser() -> argparse.ArgumentParser:
 def main() -> None:
     args = build_parser().parse_args()
     archive = default_archive()
+    controls = default_controls()
 
     if args.command == "archive-search":
         results = [item.model_dump(mode="json") for item in archive.search(args.query)]
@@ -67,6 +72,31 @@ def main() -> None:
 
     if args.command == "benchmark-all":
         results = [item.model_dump(mode="json") for item in benchmark_archive(archive)]
+        print(json.dumps(results, indent=2))
+        return
+
+    if args.command == "control-stats":
+        print(json.dumps(controls.stats().model_dump(mode="json"), indent=2))
+        return
+
+    if args.command == "validate-controls":
+        failures = {
+            case.control_id: issues
+            for case in controls.all_controls()
+            if (issues := control_quality_issues(case))
+        }
+        output = {
+            "valid": not failures,
+            "control_count": len(controls.all_controls()),
+            "failures": failures,
+        }
+        print(json.dumps(output, indent=2))
+        if failures:
+            raise SystemExit(1)
+        return
+
+    if args.command == "benchmark-controls":
+        results = [item.model_dump(mode="json") for item in controls.assessments()]
         print(json.dumps(results, indent=2))
         return
 
