@@ -15,7 +15,7 @@
 
 **Visible outcome:** a documented, testable codebase with health/API endpoints, deterministic risk evaluation, migrations, immutable evidence handling, and historical replay.
 
-## P1 — Historical Archive MVP — **in progress**
+## P1 — Historical Archive MVP — **in progress; P1A complete**
 - [x] canonical historical case schema
 - [x] source provenance model
 - [x] dated indicator events
@@ -27,13 +27,13 @@
 - [x] developer CLI
 - [x] first source-backed benchmark case: QVSE
 - [x] first lead-time benchmark: Elevated Caution 45 days before reported freeze
-- [ ] create first 20 deeply sourced Kenyan cases
+- [x] create first 20 deeply sourced Kenyan cases
 - [ ] enrich QVSE with pre-July corporate/social/recruitment evidence
-- [ ] add lifecycle-stage model to every case
-- [ ] add loss/victim estimate ranges and confidence
-- [ ] add court/enforcement event model
+- [x] add lifecycle-stage model to every case
+- [x] add loss/victim estimate ranges and confidence
+- [x] add court/enforcement event model
 - [ ] public historical archive frontend
-- [ ] archive-wide benchmark report
+- [x] archive-wide benchmark report
 
 **Visible outcome:** searchable historical case library explaining how schemes worked, what evidence was available at each date, and how early Dawnwatch would have warned.
 
@@ -109,7 +109,7 @@
 - [x] no-hindsight leakage test
 - [x] lead-time measurement
 - [x] first QVSE benchmark
-- [ ] 20-case benchmark set
+- [x] 20-case positive-case archive; five cases currently meet explicit benchmark eligibility
 - [ ] precision/recall
 - [ ] false-positive analysis
 - [ ] weight calibration
