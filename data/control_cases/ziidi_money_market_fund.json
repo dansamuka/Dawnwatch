@@ -1,0 +1,60 @@
+{
+  "control_id": "control-ke-ziidi-mmf",
+  "canonical_name": "Ziidi Money Market Fund",
+  "jurisdiction": "Kenya",
+  "control_type": "regulated_collective_investment_scheme",
+  "matched_patterns": [
+    "MASS_MARKET",
+    "MOBILE_FIRST",
+    "LOW_ENTRY",
+    "RECENT_PRODUCT",
+    "RETURN_SEEKING"
+  ],
+  "expected_max_state": "WATCH",
+  "sources": [
+    {
+      "source_id": "cma-approved-cis-register-2026-09-24",
+      "source_name": "Capital Markets Authority Kenya — Approved Collective Investment Schemes register",
+      "source_tier": "A",
+      "url": "https://licensees.cma.or.ke/licenses/15/",
+      "published_at": null,
+      "observed_at": "2026-09-24T13:19:00+03:00",
+      "title": "Approved Collective Investment Schemes"
+    },
+    {
+      "source_id": "cma-ziidi-approval-2024-11-27",
+      "source_name": "Capital Markets Authority Kenya",
+      "source_tier": "A",
+      "url": "https://www.cma.or.ke/cma-approves-ziidi-money-market-fundfrom-safaricom-plc/",
+      "published_at": "2024-11-27T00:00:00+03:00",
+      "observed_at": "2026-09-24T13:19:00+03:00",
+      "title": "CMA Approves Ziidi Money Market Fund From Safaricom PLC"
+    }
+  ],
+  "verification_events": [
+    {
+      "observed_at": "2024-11-27T00:00:00+03:00",
+      "verification_type": "CMA_APPROVAL",
+      "source_ids": [
+        "cma-ziidi-approval-2024-11-27"
+      ],
+      "note": "CMA granted approval to Safaricom PLC to establish Ziidi as a collective investment scheme."
+    },
+    {
+      "observed_at": "2026-09-24T13:19:00+03:00",
+      "verification_type": "CURRENT_REGISTER_MATCH",
+      "source_ids": [
+        "cma-approved-cis-register-2026-09-24"
+      ],
+      "note": "The scheme appears in the CMA approved CIS register."
+    }
+  ],
+  "positive_indicators": [
+    "VERIFIED_RELEVANT_LICENCE"
+  ],
+  "surface_risk_indicators": [],
+  "sample_marketing_text": "Invest through M-PESA in a regulated money market fund designed to help customers grow savings through diversified short-term investments.",
+  "notes": [
+    "Matched because it is mobile-first, mass-market and investment-return oriented, while regulatory approval is directly verifiable."
+  ]
+}
