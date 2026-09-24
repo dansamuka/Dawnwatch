@@ -25,7 +25,7 @@
       "source_name": "Capital Markets Authority Kenya",
       "source_tier": "A",
       "url": "https://www.cma.or.ke/wp-content/uploads/2023/03/Capital-Markets-Annual-Report-2018.pdf",
-      "published_at": "2018-12-31T00:00:00+03:00",
+      "published_at": null,
       "observed_at": "2026-09-24T13:19:00+03:00",
       "title": "Capital Markets Authority Annual Report 2018"
     }
@@ -40,12 +40,12 @@
       "note": "Old Mutual Unit Trust products are represented in the CMA register."
     },
     {
-      "observed_at": "2018-12-31T00:00:00+03:00",
+      "observed_at": "2026-09-24T13:19:00+03:00",
       "verification_type": "HISTORICAL_REGULATOR_RECORD",
       "source_ids": [
         "cma-annual-report-2018"
       ],
-      "note": "CMA annual-report material lists the Old Mutual Money Market Fund."
+      "note": "CMA-hosted annual-report material references the Old Mutual Money Market Fund; no exact original publication timestamp is asserted by this fixture."
     }
   ],
   "positive_indicators": [
