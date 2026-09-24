@@ -150,5 +150,11 @@
   ],
   "notes": [
     "No Kenya-specific loss estimate is seeded; this case is primarily valuable as a cross-border warning/reappearance benchmark."
-  ]
+  ],
+  "benchmark_definition": {
+    "benchmark_kind": "cross_border_recurrence",
+    "target_state": "ELEVATED CAUTION",
+    "milestone_type": "KENYA_REGULATOR_WARNING",
+    "interpretation": "Nigeria SEC warning to subsequent Kenya CMA warning."
+  }
 }
