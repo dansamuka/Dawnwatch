@@ -4,6 +4,7 @@ on:
   push:
     branches: ["main"]
   pull_request:
+  workflow_dispatch:
 
 jobs:
   test:
@@ -16,7 +17,11 @@ jobs:
           cache: "pip"
       - name: Install
         run: pip install -e ".[dev]"
+      - name: Compile
+        run: python -m compileall dawnwatch migrations
       - name: Lint
         run: ruff check .
+      - name: Migrate
+        run: alembic upgrade head
       - name: Test
         run: pytest -q
