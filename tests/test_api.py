@@ -66,3 +66,21 @@ def test_archive_benchmarks_include_qvse_lead_time() -> None:
     assert response.status_code == 200
     results = {item["case_id"]: item for item in response.json()}
     assert results["kenya-qvse-2026"]["lead_time_days"] == 45
+
+
+def test_control_stats_show_clean_p1b_cohort() -> None:
+    response = client.get("/api/v1/controls/stats")
+    assert response.status_code == 200
+    payload = response.json()
+    assert payload["total_controls"] == 10
+    assert payload["quality_clean"] == 10
+    assert payload["risk_false_positives"] == 0
+    assert payload["discovery_false_positives"] == 0
+
+
+def test_control_assessments_keep_makiba_at_watch() -> None:
+    response = client.get("/api/v1/controls/assessments")
+    assert response.status_code == 200
+    results = {item["control_id"]: item for item in response.json()}
+    assert results["control-ke-m-akiba"]["risk_state"] == "WATCH"
+    assert results["control-ke-m-akiba"]["risk_false_positive"] is False
