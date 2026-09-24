@@ -41,6 +41,14 @@
       "url": "https://new.kenyalaw.org/akn/ke/judgment/kehc/2023/836/eng%402023-02-09",
       "published_at": "2023-02-09T00:00:00+03:00",
       "title": "Asset Recovery Agency v Muriithi & others"
+    },
+    {
+      "source_id": "star-goldenscape-arrest-2020-03-27",
+      "source_name": "The Star",
+      "source_tier": "B",
+      "url": "https://www.the-star.co.ke/sports/2020-03-27-businessman-arrested-over-fraudulent-greenhouse-deal",
+      "published_at": "2020-03-27T09:45:00+03:00",
+      "title": "Businessman arrested over fraudulent greenhouse deal"
     }
   ],
   "indicator_events": [
@@ -74,6 +82,15 @@
         "mwakilishi-goldenscape-2020-03-06"
       ],
       "note": "Public reporting of non-payment."
+    },
+    {
+      "milestone_type": "DCI_ARREST",
+      "occurred_at": "2020-03-27T00:00:00+03:00",
+      "first_documented_at": "2020-03-27T09:45:00+03:00",
+      "source_ids": [
+        "star-goldenscape-arrest-2020-03-27"
+      ],
+      "note": "DCI arrested the director after public payment-failure reports."
     },
     {
       "milestone_type": "CRIMINAL_CHARGE",
@@ -131,6 +148,15 @@
     }
   ],
   "legal_events": [
+    {
+      "event_type": "ARREST",
+      "occurred_at": "2020-03-27T00:00:00+03:00",
+      "source_ids": [
+        "star-goldenscape-arrest-2020-03-27"
+      ],
+      "status": "investigation",
+      "note": "Arrest preceded the later 2021 criminal charge and does not itself establish guilt."
+    },
     {
       "event_type": "CRIMINAL_CHARGE",
       "occurred_at": "2021-03-18T00:00:00+03:00",
