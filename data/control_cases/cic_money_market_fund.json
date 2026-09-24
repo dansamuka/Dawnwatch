@@ -1,0 +1,60 @@
+{
+  "control_id": "control-ke-cic-mmf",
+  "canonical_name": "CIC Money Market Fund",
+  "jurisdiction": "Kenya",
+  "control_type": "regulated_collective_investment_scheme",
+  "matched_patterns": [
+    "MASS_MARKET",
+    "RETURN_SEEKING",
+    "MONEY_MARKET",
+    "CUSTODY_STRUCTURE"
+  ],
+  "expected_max_state": "WATCH",
+  "sources": [
+    {
+      "source_id": "cma-approved-cis-register-2026-09-24",
+      "source_name": "Capital Markets Authority Kenya — Approved Collective Investment Schemes register",
+      "source_tier": "A",
+      "url": "https://licensees.cma.or.ke/licenses/15/",
+      "published_at": null,
+      "observed_at": "2026-09-24T13:19:00+03:00",
+      "title": "Approved Collective Investment Schemes"
+    },
+    {
+      "source_id": "cma-cic-2012-report",
+      "source_name": "Capital Markets Authority Resource Center / CIC report",
+      "source_tier": "A",
+      "url": "https://annualreport.cma.or.ke/media/INSURANCE/CIC%20Insurance%20Group/documents/2012.pdf",
+      "published_at": null,
+      "observed_at": "2026-09-24T13:19:00+03:00",
+      "title": "CIC report documenting the CIC Money Market Fund"
+    }
+  ],
+  "verification_events": [
+    {
+      "observed_at": "2026-09-24T13:19:00+03:00",
+      "verification_type": "CURRENT_REGISTER_MATCH",
+      "source_ids": [
+        "cma-approved-cis-register-2026-09-24"
+      ],
+      "note": "CIC Unit Trust Scheme and its Money Market Fund appear in the CMA approved CIS register."
+    },
+    {
+      "observed_at": "2026-09-24T13:19:00+03:00",
+      "verification_type": "CUSTODY_DISCLOSURE",
+      "source_ids": [
+        "cma-cic-2012-report"
+      ],
+      "note": "Historical CMA-hosted reporting identifies custody services for the fund."
+    }
+  ],
+  "positive_indicators": [
+    "VERIFIED_RELEVANT_LICENCE",
+    "VERIFIED_REGULATED_CUSTODY"
+  ],
+  "surface_risk_indicators": [],
+  "sample_marketing_text": "Invest in a regulated money market fund that pools investor money into short-term market instruments and reports investment income.",
+  "notes": [
+    "This control is useful because independently disclosed custody is a strong differentiator from opaque pooled-money schemes."
+  ]
+}
