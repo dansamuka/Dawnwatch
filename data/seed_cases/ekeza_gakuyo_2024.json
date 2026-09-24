@@ -16,7 +16,7 @@
   "active_to": "2018-12-31T23:59:59+03:00",
   "outcome_status": "criminal-case-active",
   "archive_quality": "archive-complete",
-  "benchmark_eligible": true,
+  "benchmark_eligible": false,
   "sources": [
     {
       "source_id": "dci-ekeza-2024-02-22",
@@ -156,6 +156,7 @@
     }
   ],
   "notes": [
-    "The DCI page reports allegations and audit findings; criminal liability remains a matter for the courts."
+    "The DCI page reports allegations and audit findings; criminal liability remains a matter for the courts.",
+    "Not marked benchmark-eligible because the current seeded evidence begins with public complaints/investigation rather than a verified pre-failure warning."
   ]
 }
