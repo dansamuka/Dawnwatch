@@ -3,7 +3,7 @@ from __future__ import annotations
 import hashlib
 import json
 from dataclasses import dataclass
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 
@@ -49,7 +49,7 @@ class LocalEvidenceStore:
                 "size_bytes": len(content),
                 "source_name": source_name,
                 "source_url": source_url,
-                "observed_at": (observed_at or datetime.now(timezone.utc)).isoformat(),
+                "observed_at": (observed_at or datetime.now(UTC)).isoformat(),
                 "mime_type": mime_type,
             }
             manifest_path.write_text(
