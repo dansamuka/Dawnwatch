@@ -23,5 +23,11 @@ jobs:
         run: ruff check .
       - name: Migrate
         run: alembic upgrade head
+      - name: Validate historical archive
+        run: dawnwatch validate-archive
+      - name: Validate matched controls
+        run: dawnwatch validate-controls
+      - name: Benchmark matched controls
+        run: dawnwatch benchmark-controls
       - name: Test
         run: pytest -q
