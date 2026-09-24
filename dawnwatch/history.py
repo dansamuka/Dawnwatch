@@ -21,7 +21,8 @@ class HistoricalSource(BaseModel):
     source_name: str
     source_tier: str
     url: str
-    published_at: datetime
+    published_at: datetime | None = None
+    observed_at: datetime | None = None
     title: str | None = None
 
 
