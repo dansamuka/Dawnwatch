@@ -55,6 +55,24 @@
       "url": "https://www.businessdailyafrica.com/bd/corporate/companies/fraud-linked-qvse-owner-returns-with-new-scheme-5606582",
       "published_at": "2026-09-23T00:00:00+03:00",
       "title": "Fraud-linked QVSE owner returns with new scheme"
+    },
+    {
+      "source_id": "qvse-archived-registration-2026-07-21",
+      "source_name": "Archived QVSE registration capture described by Tech-ish",
+      "source_tier": "C",
+      "url": "https://tech-ish.com/2026/09/09/qvse-global-investment-group-kenya-filings/",
+      "published_at": "2026-09-09T00:00:00+03:00",
+      "observed_at": "2026-07-21T00:00:00+03:00",
+      "title": "Archived QVSE registration page carrying invitation codes"
+    },
+    {
+      "source_id": "na-hansard-qvse-2026-08-12",
+      "source_name": "Kenya National Assembly Hansard (Mzalendo mirror)",
+      "source_tier": "B",
+      "url": "https://mzalendo.com/democracy-tools/hansard/document/3141/",
+      "published_at": "2026-08-12T00:00:00+03:00",
+      "observed_at": "2026-08-12T00:00:00+03:00",
+      "title": "Request for Statement: Operation of QVSE under Global Investment Group in Kenya"
     }
   ],
   "indicator_events": [
@@ -107,12 +125,23 @@
         "bd-2026-09-18"
       ],
       "note": "Business Daily linked the operator and GIG banner to an earlier failed platform, PCEX."
+    },
+    {
+      "observed_at": "2026-07-21T00:00:00+03:00",
+      "indicator": "REFERRAL_RECRUITMENT",
+      "confirmed": true,
+      "confidence": 0.75,
+      "source_ids": [
+        "qvse-archived-registration-2026-07-21"
+      ],
+      "note": "An archived registration capture later documented by Tech-ish contained pre-filled invitation-code fields. Confidence is reduced because the retrieval route is retrospective even though the underlying capture is dated 21 July."
     }
   ],
   "notes": [
     "This fixture stores the date evidence became publicly available to Dawnwatch, not merely the date of the underlying event.",
     "Later investigative reporting must not be used in an earlier historical replay.",
-    "This case is a benchmark fixture, not a substitute for the eventual full case dossier."
+    "This case is a benchmark fixture, not a substitute for the eventual full case dossier.",
+    "P1B preserves the distinction between a retrospective article and the dated archived capture it describes; only the capture date is used for the referral signal."
   ],
   "milestones": [
     {
@@ -185,6 +214,16 @@
         "bd-2026-09-23"
       ],
       "note": "Reporting said investors were being directed toward Apollo Exchange."
+    },
+    {
+      "stage": "PARLIAMENTARY_SCRUTINY",
+      "started_at": "2026-08-12T00:00:00+03:00",
+      "ended_at": null,
+      "first_documented_at": "2026-08-12T00:00:00+03:00",
+      "source_ids": [
+        "na-hansard-qvse-2026-08-12"
+      ],
+      "note": "A National Assembly request for statement raised concerns about licensing, ownership, investor protection and allegations of an unlawful or pyramid investment scheme."
     }
   ],
   "impact_estimates": [
