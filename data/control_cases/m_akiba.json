@@ -1,0 +1,62 @@
+{
+  "control_id": "control-ke-m-akiba",
+  "canonical_name": "M-Akiba Retail Government Bond",
+  "jurisdiction": "Kenya",
+  "control_type": "government_retail_bond",
+  "matched_patterns": [
+    "MOBILE_FIRST",
+    "LOW_ENTRY",
+    "FIXED_RETURN",
+    "MASS_MARKET",
+    "DIGITAL_ONBOARDING"
+  ],
+  "expected_max_state": "WATCH",
+  "sources": [
+    {
+      "source_id": "treasury-public-debt-makiba",
+      "source_name": "National Treasury Kenya",
+      "source_tier": "A",
+      "url": "https://www.treasury.go.ke/directorate-public-debt-management",
+      "published_at": null,
+      "observed_at": "2026-09-24T13:19:00+03:00",
+      "title": "Directorate of Public Debt Management"
+    },
+    {
+      "source_id": "cdsc-makiba-launch",
+      "source_name": "Central Depository & Settlement Corporation",
+      "source_tier": "A",
+      "url": "https://cdsckenya.com/m-akiba-launch/",
+      "published_at": null,
+      "observed_at": "2026-09-24T13:19:00+03:00",
+      "title": "M-Akiba Launch"
+    }
+  ],
+  "verification_events": [
+    {
+      "observed_at": "2026-09-24T13:19:00+03:00",
+      "verification_type": "GOVERNMENT_ISSUER_VERIFIED",
+      "source_ids": [
+        "treasury-public-debt-makiba"
+      ],
+      "note": "The National Treasury identifies M-Akiba as a mobile/digital retail government bond."
+    },
+    {
+      "observed_at": "2026-09-24T13:19:00+03:00",
+      "verification_type": "MARKET_INFRASTRUCTURE_VERIFIED",
+      "source_ids": [
+        "cdsc-makiba-launch"
+      ],
+      "note": "CDSC documents its mandate with the National Treasury and NSE to deliver the retail-bond platform."
+    }
+  ],
+  "positive_indicators": [
+    "VERIFIED_GOVERNMENT_ISSUER"
+  ],
+  "surface_risk_indicators": [
+    "DETERMINISTIC_RETURN"
+  ],
+  "sample_marketing_text": "Invest through your mobile phone in a Government of Kenya retail bond and earn the bond's fixed coupon interest over its stated term.",
+  "notes": [
+    "This is the deliberate fixed-return counterexample: deterministic returns are not by themselves evidence of fraud when issuer and instrument are independently verifiable."
+  ]
+}
