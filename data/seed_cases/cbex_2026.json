@@ -113,7 +113,21 @@
       "note": "Kenya CMA independently warned against CBEX."
     }
   ],
-  "impact_estimates": [],
+  "impact_estimates": [
+    {
+      "metric": "kenya_reported_loss",
+      "value": null,
+      "lower_bound": null,
+      "upper_bound": null,
+      "unit": "KES",
+      "confidence": "low",
+      "as_of": "2026-09-11T00:00:00+03:00",
+      "source_ids": [
+        "ke-cma-cbex-2026-09-11"
+      ],
+      "note": "No reliable Kenya-specific aggregate loss estimate is established in the seeded sources; the field is intentionally unknown."
+    }
+  ],
   "legal_events": [
     {
       "event_type": "FOREIGN_REGULATOR_ENFORCEMENT_NOTICE",
