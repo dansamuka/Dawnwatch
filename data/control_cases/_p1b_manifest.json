@@ -1,0 +1,25 @@
+{
+  "corpus": "P1B_KENYA_MATCHED_CONTROLS_10",
+  "status": "implemented",
+  "schema_version": "1.0",
+  "validated_at": "2026-09-24",
+  "control_count": 10,
+  "quality_clean": 10,
+  "tier_a_source_references": 18,
+  "tier_b_source_references": 2,
+  "observed_risk_false_positives": 0,
+  "observed_discovery_false_positives": 0,
+  "caveat": "This is a small curated matched-control cohort. Zero observed false positives is not a production specificity estimate.",
+  "control_ids": [
+    "control-ke-ziidi-mmf",
+    "control-ke-britam-mmf",
+    "control-ke-cic-mmf",
+    "control-ke-ncba-mmf",
+    "control-ke-icea-mmf",
+    "control-ke-old-mutual-mmf",
+    "control-ke-zimele-unit-trust",
+    "control-ke-sanlam-unit-trust",
+    "control-ke-ala-mmf",
+    "control-ke-m-akiba"
+  ]
+}
