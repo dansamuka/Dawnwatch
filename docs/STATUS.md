@@ -6,16 +6,16 @@
 
 | Phase | Status | Approx. completion | What exists now |
 |---|---|---:|---|
-| P0 — Foundation | Nearing closure | 90% | Specification, governance, source policy, risk methodology, FastAPI, persistence models, Alembic migration, immutable evidence store, tests, CI workflow |
-| P1 — Historical Archive MVP | In progress | 65% | **P1A Kenya Historical 20 complete**; canonical schema, lifecycle/impact/legal models, searchable Archive API/CLI, time-travel replay, archive validation, five benchmark-eligible cases |
+| P0 — Foundation | Nearing closure | 92% | Specification, governance, source policy, risk methodology, FastAPI, persistence models, Alembic migration, immutable evidence store, tests, CI validation gates |
+| P1 — Historical Archive MVP | Advanced | 82% | **P1A + P1B implemented**; 20-case positive archive, historical-depth enrichments, 10 matched controls, time-travel replay, quality gates, false-positive regression |
 | P2 — Entity Graph | Started structurally | 10% | Entity/alias/relationship database schema; no graph resolution engine or UI yet |
 | P3 — Regulatory Watch | Not started | 0% | Source policy and regulator concepts only |
-| P4 — News Radar | Prototype concepts | 10% | Text candidate-discovery primitive; no live news connectors yet |
+| P4 — News Radar | Prototype concepts | 12% | Text candidate-discovery primitive; P1B control tests now constrain over-triggering |
 | P5 — Public Social Radar | Prototype concepts | 5% | Recruitment/urgency/withdrawal language primitives; no live social connectors |
 | P6 — Submission Intelligence | Not started | 0% | Specification only |
-| P7 — Risk Engine v1 | Early implementation | 30% | Deterministic explainable engine, risk states, government/regulator findings, weights, economics analyser |
+| P7 — Risk Engine v1 | Early implementation | 38% | Deterministic explainable engine, positive verification weights, government-issuer handling, economics analyser, control regression |
 | P8 — Watchtower | Not started | 0% | Specification only |
-| P9 — Historical Validation | In progress | 30% | 20-case positive corpus, no-hindsight replay, five eligible lead-time benchmarks; control cohort still required |
+| P9 — Historical Validation | In progress | 45% | Positive corpus + matched controls, no-hindsight replay, five explicit benchmark types, first false-positive checks |
 | P10 — Institutional Portal | Not started | 0% | Specification only |
 
 ## P0 closure
@@ -32,6 +32,8 @@ Completed:
 - [x] immutable content-addressed evidence store
 - [x] API, risk, discovery, persistence, evidence, archive and replay tests
 - [x] GitHub Actions CI definition
+- [x] CI archive-validation gate
+- [x] CI matched-control-validation gate
 
 Remaining:
 - [ ] confirm a green GitHub Actions run on the latest main commit
@@ -40,54 +42,67 @@ Remaining:
 
 ## P1A — Kenya Historical 20 — **implemented**
 
+Current positive corpus:
+
+- 20 unique historical cases
+- 20 archive-complete
+- 5 benchmark-eligible
+- lifecycle, impact and legal/enforcement models
+- explicit benchmark definitions
+- no-hindsight replay
+- searchable API/CLI
+- legacy-taskforce regression checks
+
+P1B subsequently deepened the same corpus; it did not change the 20-case membership.
+
+## P1B — Historical Depth + Matched Controls — **implemented**
+
+### Historical depth
+
 Completed:
-- [x] exactly 20 unique Kenyan historical cases
-- [x] 20/20 marked archive-complete
-- [x] source provenance on every case
-- [x] lifecycle-stage model
-- [x] victim/loss/impact estimates with confidence and explicit unknowns where necessary
-- [x] legal/enforcement event model
-- [x] allegation / charge / finding / acquittal distinctions
-- [x] no-hindsight historical replay
-- [x] archive-wide quality gate
-- [x] archive statistics API
-- [x] archive validation CLI
-- [x] five explicitly benchmark-eligible cases
-- [x] archive-wide benchmark engine
-- [x] regression tests for benchmark lead times
-- [x] 2009 taskforce cohort regression tests
-- [x] P1A benchmark report
+- [x] Public Likes contemporaneous warning moved to 8 June 2017
+- [x] Public Likes lead time improved from 11 to **46 days**
+- [x] QVSE dated 21 July archived invitation-code evidence
+- [x] QVSE 12 August parliamentary-scrutiny stage
+- [x] Bitstream referenced pre-collapse warning preserved without inventing the missing original date
+- [x] Goldenscape independent agricultural-economics scrutiny
+- [x] source provenance supports both `published_at` and `observed_at`
+- [x] every source must carry time provenance
 
-Current P1A corpus spans:
-- classic pyramid/deposit-taking schemes;
-- SACCO and real-estate structures;
-- click-to-earn and task apps;
-- crypto schemes;
-- fake AI trading apps;
-- agribusiness investment;
-- high-yield collective-investment propositions;
-- cross-border regulatory recurrence.
+### Matched controls
 
-### P1A benchmark lead times currently locked
+Completed:
+- [x] 10 legitimate/verified Kenyan controls
+- [x] 10/10 quality-clean
+- [x] 18 Tier A source references
+- [x] 2 Tier B source references
+- [x] matched surface-pattern tags
+- [x] explicit verification events
+- [x] discovery false-positive regression
+- [x] risk-state false-positive regression
+- [x] M-Akiba deterministic-return counterexample
+- [x] control API and CLI
+- [x] control manifest and methodology documentation
 
-| Case | Lead time | Interpretation |
-|---|---:|---|
-| QVSE | 45 days | Ghana SEC warning → reported Kenya account freeze |
-| Public Likes | 11 days | structural warning → M-Pesa Paybill suspension |
-| Goldenscape | 21 days | public payment-failure warning → DCI arrest |
-| Amazon Web Worker | 11 days | public collapse reporting → DCI arrest |
-| CBEX | 512 days | Nigeria SEC warning → Kenya CMA warning |
+Direct validation result:
 
-These benchmarks are **not treated as interchangeable**. Some measure pre-disruption warning, some enforcement lead, and CBEX measures cross-border warning transfer.
+> **0 / 10 current discovery false positives**
 
-## P1 remaining after P1A
+> **0 / 10 current risk-state false positives**
 
-- [ ] enrich QVSE with pre-July corporate/social/recruitment evidence
-- [ ] build historical case-page frontend
-- [ ] add original advertisements / archived websites where available
-- [ ] normalize historical entities into Dawnwatch Graph nodes
-- [ ] build control cohort of legitimate/cleared propositions
-- [ ] archive-wide research export
+This is a regression result on a small curated cohort, **not a production specificity estimate**.
+
+## Current positive benchmarks
+
+| Case | Type | Lead time |
+|---|---|---:|
+| Public Likes | Pre-disruption | **46 days** |
+| QVSE | Loss-prevention | **45 days** |
+| Goldenscape | Enforcement lead | **21 days** |
+| Amazon Web Worker | Enforcement lead | **11 days** |
+| CBEX | Cross-border recurrence | **512 days** |
+
+The benchmark types are intentionally not averaged into one headline metric.
 
 ## Current demonstrated capability
 
@@ -96,16 +111,27 @@ Dawnwatch can now:
 1. inspect text for mass-recruitment/income proposition signals;
 2. mathematically analyse advertised returns;
 3. apply deterministic explainable risk indicators;
-4. store intelligence entities, observations, evidence, relationships and snapshots;
-5. preserve raw evidence by SHA-256;
-6. load, validate and search a 20-case historical archive;
-7. distinguish lifecycle stages, impact estimates and legal/enforcement events;
-8. replay what Dawnwatch would have known at a historical date;
-9. calculate and regression-test warning lead time;
-10. expose archive statistics and benchmarks via API and CLI.
+4. apply verified licence, custody and government-issuer counter-signals;
+5. store intelligence entities, observations, evidence, relationships and snapshots;
+6. preserve raw evidence by SHA-256;
+7. load and validate a 20-case positive historical archive;
+8. load and validate a 10-case matched control cohort;
+9. distinguish lifecycle stages, impact estimates and legal/enforcement events;
+10. replay what Dawnwatch would have known at a historical date;
+11. calculate typed warning lead times;
+12. test current discovery and risk logic against legitimate controls;
+13. expose archive and control statistics via API and CLI.
 
 ## Immediate next build target
 
-**P1B — Historical Depth + Control Cohort**
+**P1C — Calibration Preparation**
 
-P1A is a positive-case corpus. The next validation step should improve original-date evidence and create matched legitimate/cleared controls so Dawnwatch can measure false positives before risk weights are materially recalibrated or stronger accuracy claims are made.
+Recommended:
+- expand controls from 10 toward 30–50;
+- add cleared/false-alarm cases, not only regulated funds;
+- recover more original pre-collapse evidence;
+- build blinded train/validation splits;
+- measure confusion matrices by benchmark type;
+- calibrate weights only after those safeguards exist.
+
+Live regulator/news Radar can then be evaluated against a methodology that has both positive and negative historical examples.
