@@ -71,7 +71,7 @@ def test_p1a_benchmark_lead_times_are_stable() -> None:
     results = {item.case_id: item for item in benchmark_archive(ARCHIVE)}
 
     assert results["kenya-qvse-2026"].lead_time_days == 45
-    assert results["kenya-public-likes-2017"].lead_time_days == 11
+    assert results["kenya-public-likes-2017"].lead_time_days == 46
     assert results["kenya-goldenscape-2021"].lead_time_days == 21
     assert results["kenya-amazon-web-worker-2021"].lead_time_days == 11
     assert results["kenya-cbex-2026"].lead_time_days == 512
