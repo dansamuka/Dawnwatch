@@ -5,7 +5,8 @@ import json
 from datetime import datetime
 
 from dawnwatch.archive import default_archive
-from dawnwatch.history import lead_time_days, replay_case
+from dawnwatch.benchmark import benchmark_archive
+from dawnwatch.history import lead_time_days, quality_issues, replay_case
 from dawnwatch.models import RiskState
 
 
@@ -18,6 +19,10 @@ def build_parser() -> argparse.ArgumentParser:
 
     search = subparsers.add_parser("archive-search", help="Search historical seed cases")
     search.add_argument("query")
+
+    subparsers.add_parser("archive-stats", help="Summarize the historical archive")
+    subparsers.add_parser("validate-archive", help="Validate every historical case")
+    subparsers.add_parser("benchmark-all", help="Run all benchmark-eligible cases")
 
     replay = subparsers.add_parser("replay", help="Replay a historical case as of a date")
     replay.add_argument("case_id")
@@ -37,6 +42,31 @@ def main() -> None:
 
     if args.command == "archive-search":
         results = [item.model_dump(mode="json") for item in archive.search(args.query)]
+        print(json.dumps(results, indent=2))
+        return
+
+    if args.command == "archive-stats":
+        print(json.dumps(archive.stats().model_dump(mode="json"), indent=2))
+        return
+
+    if args.command == "validate-archive":
+        failures = {
+            case.case_id: issues
+            for case in archive.all_cases()
+            if (issues := quality_issues(case))
+        }
+        output = {
+            "valid": not failures,
+            "case_count": len(archive.all_cases()),
+            "failures": failures,
+        }
+        print(json.dumps(output, indent=2))
+        if failures:
+            raise SystemExit(1)
+        return
+
+    if args.command == "benchmark-all":
+        results = [item.model_dump(mode="json") for item in benchmark_archive(archive)]
         print(json.dumps(results, indent=2))
         return
 
