@@ -142,5 +142,93 @@
       ],
       "note": "Business Daily reported that investors were being directed toward Apollo."
     }
+  ],
+  "archive_quality": "archive-complete",
+  "benchmark_eligible": true,
+  "lifecycle_stages": [
+    {
+      "stage": "MASS_RECRUITMENT_AND_COPY_TRADING",
+      "started_at": "2026-01-15T00:00:00+03:00",
+      "ended_at": "2026-09-05T00:00:00+03:00",
+      "first_documented_at": "2026-09-14T00:00:00+03:00",
+      "source_ids": [
+        "bd-2026-09-14"
+      ],
+      "note": "Reporting describes recruitment into a copy-trading model using crypto funding and trading signals."
+    },
+    {
+      "stage": "FOREIGN_REGULATOR_WARNING",
+      "started_at": "2026-07-22T00:00:00+00:00",
+      "ended_at": null,
+      "first_documented_at": "2026-07-22T00:00:00+00:00",
+      "source_ids": [
+        "sec-gh-2026-07-22"
+      ],
+      "note": "Ghana SEC warning predates the reported Kenya account freeze."
+    },
+    {
+      "stage": "WITHDRAWAL_FREEZE_AND_EXTRACTION",
+      "started_at": "2026-09-05T00:00:00+03:00",
+      "ended_at": null,
+      "first_documented_at": "2026-09-14T00:00:00+03:00",
+      "source_ids": [
+        "bd-2026-09-14"
+      ],
+      "note": "Accounts were reportedly frozen and some users were asked for additional money to reactivate or verify accounts."
+    },
+    {
+      "stage": "SUCCESSOR_PLATFORM_MIGRATION",
+      "started_at": "2026-09-23T00:00:00+03:00",
+      "ended_at": null,
+      "first_documented_at": "2026-09-23T00:00:00+03:00",
+      "source_ids": [
+        "bd-2026-09-23"
+      ],
+      "note": "Reporting said investors were being directed toward Apollo Exchange."
+    }
+  ],
+  "impact_estimates": [
+    {
+      "metric": "reported_platform_members",
+      "value": 12005,
+      "unit": "people",
+      "confidence": "medium",
+      "as_of": "2026-09-23T00:00:00+03:00",
+      "source_ids": [
+        "bd-2026-09-23"
+      ],
+      "note": "Business Daily reported a BonChat membership figure of 12,005; Dawnwatch treats this as a reported platform figure, not independently verified victim count."
+    },
+    {
+      "metric": "reported_locked_balances",
+      "upper_bound": 1000000000,
+      "unit": "KES",
+      "confidence": "low",
+      "as_of": "2026-09-23T00:00:00+03:00",
+      "source_ids": [
+        "bd-2026-09-23"
+      ],
+      "note": "Reporting described balances as potentially approaching KSh1 billion; this is not an independently verified loss total."
+    }
+  ],
+  "legal_events": [
+    {
+      "event_type": "KENYA_REGULATOR_WARNING_AND_ACTIVE_INVESTIGATION",
+      "occurred_at": "2026-09-11T00:00:00+03:00",
+      "source_ids": [
+        "cma-ke-2026-09-11"
+      ],
+      "status": "active-investigation",
+      "note": "CMA warned against QVSE and said listed entities were under active investigation with DCI and other agencies."
+    },
+    {
+      "event_type": "CRIMINAL_CHARGES_AGAINST_ALLEGED_LOCAL_AGENTS",
+      "occurred_at": "2026-09-23T00:00:00+03:00",
+      "source_ids": [
+        "bd-2026-09-23"
+      ],
+      "status": "pleaded-not-guilty",
+      "note": "Business Daily reported charges against two alleged local agents. Charges remain allegations unless proven."
+    }
   ]
 }
