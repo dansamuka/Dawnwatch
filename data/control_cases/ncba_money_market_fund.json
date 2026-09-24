@@ -1,0 +1,59 @@
+{
+  "control_id": "control-ke-ncba-mmf",
+  "canonical_name": "NCBA Money Market Fund (KES)",
+  "jurisdiction": "Kenya",
+  "control_type": "regulated_collective_investment_scheme",
+  "matched_patterns": [
+    "MASS_MARKET",
+    "DIGITAL_ACCESS",
+    "RETURN_SEEKING",
+    "MONEY_MARKET"
+  ],
+  "expected_max_state": "WATCH",
+  "sources": [
+    {
+      "source_id": "cma-approved-cis-register-2026-09-24",
+      "source_name": "Capital Markets Authority Kenya — Approved Collective Investment Schemes register",
+      "source_tier": "A",
+      "url": "https://licensees.cma.or.ke/licenses/15/",
+      "published_at": null,
+      "observed_at": "2026-09-24T13:19:00+03:00",
+      "title": "Approved Collective Investment Schemes"
+    },
+    {
+      "source_id": "ncba-official-mmf",
+      "source_name": "NCBA Investment Bank",
+      "source_tier": "B",
+      "url": "https://investment-bank.ncbagroup.com/wealth-management/collective-investment-schemes/ncba-money-market-fund/",
+      "published_at": null,
+      "observed_at": "2026-09-24T13:19:00+03:00",
+      "title": "NCBA Money Market Fund"
+    }
+  ],
+  "verification_events": [
+    {
+      "observed_at": "2026-09-24T13:19:00+03:00",
+      "verification_type": "CURRENT_REGISTER_MATCH",
+      "source_ids": [
+        "cma-approved-cis-register-2026-09-24"
+      ],
+      "note": "NCBA Money Market Fund (KES) appears in the CMA approved CIS register."
+    },
+    {
+      "observed_at": "2026-09-24T13:19:00+03:00",
+      "verification_type": "ISSUER_PRODUCT_DOCUMENTATION",
+      "source_ids": [
+        "ncba-official-mmf"
+      ],
+      "note": "NCBA's official investment-bank site documents the product."
+    }
+  ],
+  "positive_indicators": [
+    "VERIFIED_RELEVANT_LICENCE"
+  ],
+  "surface_risk_indicators": [],
+  "sample_marketing_text": "Invest in a Kenya shilling money market fund for professional management of short-term savings and investment income.",
+  "notes": [
+    "Matched to ordinary digital savings/investment language that a discovery engine must not overclassify."
+  ]
+}
