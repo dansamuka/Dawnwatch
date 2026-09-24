@@ -74,6 +74,11 @@ def control_quality_issues(case: ControlCase) -> list[str]:
         issues.append("fewer_than_two_sources")
     if not any(source.source_tier == "A" for source in case.sources):
         issues.append("no_tier_a_source")
+    if any(
+        source.published_at is None and source.observed_at is None
+        for source in case.sources
+    ):
+        issues.append("source_without_time_provenance")
     if not case.verification_events:
         issues.append("no_verification_events")
     if not case.positive_indicators:
