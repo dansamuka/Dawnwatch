@@ -1,0 +1,141 @@
+{
+  "case_id": "kenya-passy-ma-trevor-2024",
+  "canonical_name": "Passy Ma Trevor Investment Scheme / Pafrim",
+  "aliases": [
+    "Passy Ma Trevor",
+    "Pafrim Investment Limited",
+    "Pascaline Peter investment scheme"
+  ],
+  "jurisdiction": "Kenya",
+  "category": [
+    "collective-investment-scheme",
+    "high-return-investment",
+    "real-estate-bait"
+  ],
+  "active_from": "2023-03-03T00:00:00+03:00",
+  "active_to": "2024-08-30T00:00:00+03:00",
+  "outcome_status": "criminal-charges-pending",
+  "archive_quality": "archive-complete",
+  "benchmark_eligible": false,
+  "sources": [
+    {
+      "source_id": "odpp-passy-2024-11-11",
+      "source_name": "Office of the Director of Public Prosecutions",
+      "source_tier": "A",
+      "url": "https://odpp.go.ke/online-influencer-passy-ma-trevor-in-court-over-ksh-80-million-scam/",
+      "published_at": "2024-11-11T00:00:00+03:00",
+      "title": "Online influencer Passy Ma Trevor in court over Ksh. 80 million scam"
+    },
+    {
+      "source_id": "citizen-passy-2024",
+      "source_name": "Citizen Digital",
+      "source_tier": "B",
+      "url": "https://citizen.digital/article/popular-influencer-passy-ma-trevor-charged-over-ksh80m-scam-n352581",
+      "published_at": "2024-11-11T00:00:00+03:00",
+      "title": "Popular influencer Passy Ma Trevor charged over Ksh.80M scam"
+    }
+  ],
+  "indicator_events": [
+    {
+      "observed_at": "2024-11-11T00:00:00+03:00",
+      "indicator": "EXTREME_RETURN",
+      "confirmed": true,
+      "confidence": 1,
+      "source_ids": [
+        "odpp-passy-2024-11-11"
+      ],
+      "note": "Charges alleged a promised monthly interest return of 23.5%."
+    },
+    {
+      "observed_at": "2024-11-11T00:00:00+03:00",
+      "indicator": "NO_VERIFIED_RELEVANT_LICENCE",
+      "confirmed": true,
+      "confidence": 0.95,
+      "source_ids": [
+        "odpp-passy-2024-11-11"
+      ],
+      "note": "ODPP reported charges of operating a collective investment scheme without a valid CMA or CBK licence."
+    },
+    {
+      "observed_at": "2024-11-11T00:00:00+03:00",
+      "indicator": "WIDESPREAD_WITHDRAWAL_FAILURE",
+      "confirmed": true,
+      "confidence": 0.8,
+      "source_ids": [
+        "odpp-passy-2024-11-11"
+      ],
+      "note": "Investigators alleged the accused went into hiding after complainants demanded returns."
+    }
+  ],
+  "milestones": [
+    {
+      "milestone_type": "CRIMINAL_CHARGES",
+      "occurred_at": "2024-11-11T00:00:00+03:00",
+      "first_documented_at": "2024-11-11T00:00:00+03:00",
+      "source_ids": [
+        "odpp-passy-2024-11-11"
+      ],
+      "note": "Charges filed; accused pleaded not guilty."
+    }
+  ],
+  "lifecycle_stages": [
+    {
+      "stage": "FUNDRAISING",
+      "started_at": "2023-03-03T00:00:00+03:00",
+      "ended_at": "2024-08-30T00:00:00+03:00",
+      "first_documented_at": "2024-11-11T00:00:00+03:00",
+      "source_ids": [
+        "odpp-passy-2024-11-11"
+      ],
+      "note": "ODPP charge period."
+    },
+    {
+      "stage": "COMPLAINTS_AND_ENFORCEMENT",
+      "started_at": null,
+      "ended_at": null,
+      "first_documented_at": "2024-11-11T00:00:00+03:00",
+      "source_ids": [
+        "odpp-passy-2024-11-11"
+      ],
+      "note": "79 complainants and criminal charges were reported."
+    }
+  ],
+  "impact_estimates": [
+    {
+      "metric": "complainants",
+      "value": 79,
+      "unit": "people",
+      "confidence": "high",
+      "as_of": "2024-11-11T00:00:00+03:00",
+      "source_ids": [
+        "odpp-passy-2024-11-11"
+      ],
+      "note": "Number of complainants stated by ODPP."
+    },
+    {
+      "metric": "charged_amount",
+      "lower_bound": 80000000,
+      "unit": "KES",
+      "confidence": "high",
+      "as_of": "2024-11-11T00:00:00+03:00",
+      "source_ids": [
+        "odpp-passy-2024-11-11"
+      ],
+      "note": "ODPP said charges covered over KSh80 million."
+    }
+  ],
+  "legal_events": [
+    {
+      "event_type": "CRIMINAL_CHARGE",
+      "occurred_at": "2024-11-11T00:00:00+03:00",
+      "source_ids": [
+        "odpp-passy-2024-11-11"
+      ],
+      "status": "pleaded-not-guilty",
+      "note": "Charges are allegations pending adjudication."
+    }
+  ],
+  "notes": [
+    "The archive does not treat the charges as a conviction."
+  ]
+}
