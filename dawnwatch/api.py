@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 
 from dawnwatch.models import RiskAssessment, RiskEvaluationRequest
+from dawnwatch.returns import ReturnAnalysis, ReturnClaim, analyze_return_claim
 from dawnwatch.risk_engine import METHODOLOGY_VERSION, WEIGHTS, evaluate
 
 app = FastAPI(
@@ -29,3 +30,8 @@ def methodology() -> dict[str, object]:
 @app.post("/api/v1/risk/evaluate", response_model=RiskAssessment)
 def risk_evaluate(request: RiskEvaluationRequest) -> RiskAssessment:
     return evaluate(request)
+
+
+@app.post("/api/v1/economics/analyze", response_model=ReturnAnalysis)
+def economics_analyze(claim: ReturnClaim) -> ReturnAnalysis:
+    return analyze_return_claim(claim)
