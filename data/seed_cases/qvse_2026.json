@@ -1,0 +1,107 @@
+{
+  "case_id": "kenya-qvse-2026",
+  "canonical_name": "Quant Vest Stock Exchange (QVSE)",
+  "aliases": [
+    "QVSE",
+    "Quant Vest Stock Exchange"
+  ],
+  "jurisdiction": "Kenya",
+  "category": [
+    "investment",
+    "copy-trading",
+    "crypto-payment",
+    "mass-recruitment"
+  ],
+  "active_from": "2026-01-01T00:00:00+03:00",
+  "active_to": null,
+  "outcome_status": "regulatory-enforcement-active",
+  "sources": [
+    {
+      "source_id": "sec-gh-2026-07-22",
+      "source_name": "Securities and Exchange Commission Ghana",
+      "source_tier": "A",
+      "url": "https://sec.gov.gh/public-notice-list-of-entities-operating-without-a-license/",
+      "published_at": "2026-07-22T00:00:00+00:00",
+      "title": "Public Notice: List of Entities Operating Without a License"
+    },
+    {
+      "source_id": "cma-ke-2026-09-11",
+      "source_name": "Capital Markets Authority Kenya",
+      "source_tier": "A",
+      "url": "https://www.cma.or.ke/public-caution-against-investment-scams/",
+      "published_at": "2026-09-11T00:00:00+03:00",
+      "title": "Public Caution Against Investment Scams"
+    },
+    {
+      "source_id": "bd-2026-09-14",
+      "source_name": "Business Daily Africa",
+      "source_tier": "B",
+      "url": "https://www.businessdailyafrica.com/bd/lifestyle/personal-finance/how-kenyans-lost-millions-in-online-investment-scheme-5594972",
+      "published_at": "2026-09-14T00:00:00+03:00",
+      "title": "How Kenyans lost millions in online investment scheme"
+    },
+    {
+      "source_id": "bd-2026-09-18",
+      "source_name": "Business Daily Africa",
+      "source_tier": "B",
+      "url": "https://www.businessdailyafrica.com/bd/markets/capital-markets/prof-carl-and-failed-2025-investment-scheme-that-preceded-qvse-5599552",
+      "published_at": "2026-09-18T00:00:00+03:00",
+      "title": "Prof Carl and the failed 2025 investment scheme that preceded QVSE"
+    },
+    {
+      "source_id": "bd-2026-09-23",
+      "source_name": "Business Daily Africa",
+      "source_tier": "B",
+      "url": "https://www.businessdailyafrica.com/bd/corporate/companies/fraud-linked-qvse-owner-returns-with-new-scheme-5606582",
+      "published_at": "2026-09-23T00:00:00+03:00",
+      "title": "Fraud-linked QVSE owner returns with new scheme"
+    }
+  ],
+  "indicator_events": [
+    {
+      "observed_at": "2026-07-22T00:00:00+00:00",
+      "indicator": "FOREIGN_REGULATOR_WARNING",
+      "confirmed": true,
+      "confidence": 1.0,
+      "source_ids": ["sec-gh-2026-07-22"],
+      "note": "Ghana SEC included Quant Vest Stock Exchange (QVSE) in its list of entities operating without a licence in Ghana."
+    },
+    {
+      "observed_at": "2026-09-11T00:00:00+03:00",
+      "indicator": "LOCAL_REGULATOR_WARNING",
+      "confirmed": true,
+      "confidence": 1.0,
+      "source_ids": ["cma-ke-2026-09-11"],
+      "note": "Kenya CMA cautioned the public against QVSE among entities purporting to offer investment services without requisite licensing or approval."
+    },
+    {
+      "observed_at": "2026-09-14T00:00:00+03:00",
+      "indicator": "WIDESPREAD_WITHDRAWAL_FAILURE",
+      "confirmed": true,
+      "confidence": 0.9,
+      "source_ids": ["bd-2026-09-14"],
+      "note": "Business Daily reported investor accounts frozen and withdrawals failing to materialise for many investors."
+    },
+    {
+      "observed_at": "2026-09-14T00:00:00+03:00",
+      "indicator": "PAY_TO_UNLOCK_WITHDRAWAL",
+      "confirmed": true,
+      "confidence": 0.95,
+      "source_ids": ["bd-2026-09-14"],
+      "note": "Reporting described demands for an additional deposit to verify or reactivate accounts."
+    },
+    {
+      "observed_at": "2026-09-18T00:00:00+03:00",
+      "indicator": "FAILED_PREDECESSOR_LINK",
+      "confirmed": true,
+      "confidence": 0.9,
+      "source_ids": ["bd-2026-09-18"],
+      "note": "Business Daily linked the operator and GIG banner to an earlier failed platform, PCEX."
+    }
+  ],
+  "notes": [
+    "This fixture stores the date evidence became publicly available to Dawnwatch, not merely the date of the underlying event.",
+    "Later investigative reporting must not be used in an earlier historical replay.",
+    "This case is a benchmark fixture, not a substitute for the eventual full case dossier."
+  ]
+}
