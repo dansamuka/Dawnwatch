@@ -1,0 +1,42 @@
+{
+  "corpus": "P1A_KENYA_HISTORICAL_20",
+  "status": "implemented",
+  "schema_version": "1.0",
+  "validated_at": "2026-09-24",
+  "case_count": 20,
+  "archive_complete": 20,
+  "benchmark_eligible": 5,
+  "source_references": 46,
+  "tier_a_source_references": 11,
+  "tier_b_source_references": 25,
+  "case_ids": [
+    "kenya-deci-2009",
+    "kenya-clip-investments-2009",
+    "kenya-kbc-sacco-2009",
+    "kenya-sasanet-2009",
+    "kenya-jitegemee-investment-2009",
+    "kenya-circuit-investment-2009",
+    "kenya-fino-2009",
+    "kenya-global-entrepreneurship-2009",
+    "kenya-spell-investment-2009",
+    "kenya-mont-blanq-afrique-2009",
+    "kenya-public-likes-2017",
+    "kenya-goldenscape-2021",
+    "kenya-amazon-web-worker-2021",
+    "kenya-bitstream-circle-2022",
+    "kenya-nmk-capital-2023",
+    "kenya-ekeza-gakuyo-2024",
+    "kenya-passy-ma-trevor-2024",
+    "kenya-kclnl-gsiwea-2026",
+    "kenya-qvse-2026",
+    "kenya-cbex-2026"
+  ],
+  "benchmark_case_ids": [
+    "kenya-public-likes-2017",
+    "kenya-goldenscape-2021",
+    "kenya-amazon-web-worker-2021",
+    "kenya-qvse-2026",
+    "kenya-cbex-2026"
+  ],
+  "note": "Source-reference counts count per-case source records, not globally deduplicated URLs. P1A is a positive-case corpus and is not sufficient for false-positive estimation."
+}
