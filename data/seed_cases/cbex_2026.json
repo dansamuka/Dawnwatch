@@ -1,0 +1,140 @@
+{
+  "case_id": "kenya-cbex-2026",
+  "canonical_name": "CBEX (Crypto Bridge Exchange)",
+  "aliases": [
+    "CBEX",
+    "Crypto Bridge Exchange",
+    "ST Technologies International Ltd",
+    "Smart Treasure",
+    "Super Technology"
+  ],
+  "jurisdiction": "Kenya / Nigeria",
+  "category": [
+    "crypto",
+    "digital-asset-investment",
+    "high-return-investment",
+    "cross-border"
+  ],
+  "active_from": null,
+  "active_to": null,
+  "outcome_status": "multi-jurisdiction-regulator-warning",
+  "archive_quality": "archive-complete",
+  "benchmark_eligible": true,
+  "sources": [
+    {
+      "source_id": "ng-sec-cbex-2025-04-17",
+      "source_name": "Securities and Exchange Commission Nigeria",
+      "source_tier": "A",
+      "url": "https://sec.gov.ng/for-investors/keep-track-of-circulars/cbexcrypto-bridge-exchange-super-technology-st-technologies-international-ltd/",
+      "published_at": "2025-04-17T00:00:00+01:00",
+      "title": "CBEX / Super Technology / ST Technologies International Ltd"
+    },
+    {
+      "source_id": "ke-cma-cbex-2026-09-11",
+      "source_name": "Capital Markets Authority Kenya",
+      "source_tier": "A",
+      "url": "https://www.cma.or.ke/public-caution-against-investment-scams/",
+      "published_at": "2026-09-11T00:00:00+03:00",
+      "title": "Public Caution Against Investment Scams"
+    }
+  ],
+  "indicator_events": [
+    {
+      "observed_at": "2025-04-17T00:00:00+01:00",
+      "indicator": "FOREIGN_REGULATOR_WARNING",
+      "confirmed": true,
+      "confidence": 1,
+      "source_ids": [
+        "ng-sec-cbex-2025-04-17"
+      ],
+      "note": "Nigeria SEC said CBEX and affiliates were not registered to solicit investments and described implausibly high guaranteed returns and failed withdrawals."
+    },
+    {
+      "observed_at": "2025-04-17T00:00:00+01:00",
+      "indicator": "WIDESPREAD_WITHDRAWAL_FAILURE",
+      "confirmed": true,
+      "confidence": 1,
+      "source_ids": [
+        "ng-sec-cbex-2025-04-17"
+      ],
+      "note": "Nigeria SEC stated CBEX had failed to honour withdrawal requests."
+    },
+    {
+      "observed_at": "2026-09-11T00:00:00+03:00",
+      "indicator": "LOCAL_REGULATOR_WARNING",
+      "confirmed": true,
+      "confidence": 1,
+      "source_ids": [
+        "ke-cma-cbex-2026-09-11"
+      ],
+      "note": "Kenya CMA listed CBEX among entities operating unlawfully and fraudulently soliciting funds from the public."
+    }
+  ],
+  "milestones": [
+    {
+      "milestone_type": "KENYA_REGULATOR_WARNING",
+      "occurred_at": "2026-09-11T00:00:00+03:00",
+      "first_documented_at": "2026-09-11T00:00:00+03:00",
+      "source_ids": [
+        "ke-cma-cbex-2026-09-11"
+      ],
+      "note": "Kenya CMA warning creates a cross-border reuse benchmark."
+    }
+  ],
+  "lifecycle_stages": [
+    {
+      "stage": "CROSS_BORDER_RECRUITMENT",
+      "started_at": null,
+      "ended_at": null,
+      "first_documented_at": "2025-04-17T00:00:00+01:00",
+      "source_ids": [
+        "ng-sec-cbex-2025-04-17"
+      ],
+      "note": "Nigeria SEC documented investment solicitation and high-return promotion."
+    },
+    {
+      "stage": "WITHDRAWAL_FAILURE_AND_FOREIGN_ENFORCEMENT",
+      "started_at": null,
+      "ended_at": null,
+      "first_documented_at": "2025-04-17T00:00:00+01:00",
+      "source_ids": [
+        "ng-sec-cbex-2025-04-17"
+      ],
+      "note": "Nigeria SEC reported failed withdrawals and planned enforcement."
+    },
+    {
+      "stage": "KENYA_WARNING",
+      "started_at": "2026-09-11T00:00:00+03:00",
+      "ended_at": null,
+      "first_documented_at": "2026-09-11T00:00:00+03:00",
+      "source_ids": [
+        "ke-cma-cbex-2026-09-11"
+      ],
+      "note": "Kenya CMA independently warned against CBEX."
+    }
+  ],
+  "impact_estimates": [],
+  "legal_events": [
+    {
+      "event_type": "FOREIGN_REGULATOR_ENFORCEMENT_NOTICE",
+      "occurred_at": "2025-04-17T00:00:00+01:00",
+      "source_ids": [
+        "ng-sec-cbex-2025-04-17"
+      ],
+      "status": "enforcement-announced",
+      "note": "Nigeria SEC announced collaboration with law enforcement."
+    },
+    {
+      "event_type": "KENYA_ACTIVE_INVESTIGATION",
+      "occurred_at": "2026-09-11T00:00:00+03:00",
+      "source_ids": [
+        "ke-cma-cbex-2026-09-11"
+      ],
+      "status": "active-investigation",
+      "note": "Kenya CMA said listed entities were under active investigations with DCI and other agencies."
+    }
+  ],
+  "notes": [
+    "No Kenya-specific loss estimate is seeded; this case is primarily valuable as a cross-border warning/reappearance benchmark."
+  ]
+}
