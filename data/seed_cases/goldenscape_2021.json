@@ -1,0 +1,156 @@
+{
+  "case_id": "kenya-goldenscape-2021",
+  "canonical_name": "Goldenscape Greenhouses / Goldenscape Group",
+  "aliases": [
+    "Goldenscape Greenhouses",
+    "Goldenscape Group",
+    "Goldenscape Trees Africa"
+  ],
+  "jurisdiction": "Kenya",
+  "category": [
+    "agriculture-investment",
+    "high-return-investment",
+    "real-assets-bait"
+  ],
+  "active_from": "2014-01-01T00:00:00+03:00",
+  "active_to": "2020-03-01T00:00:00+03:00",
+  "outcome_status": "criminal-and-asset-recovery-proceedings",
+  "archive_quality": "archive-complete",
+  "benchmark_eligible": true,
+  "sources": [
+    {
+      "source_id": "mwakilishi-goldenscape-2020-03-06",
+      "source_name": "Mwakilishi",
+      "source_tier": "B",
+      "url": "https://mwakilishi.com/article/business-news/2020-03-06/shock-as-goldenscape-greenhouses-fails-to-pay-investors",
+      "published_at": "2020-03-06T00:00:00+03:00",
+      "title": "Shock as Goldenscape Greenhouses fails to pay investors"
+    },
+    {
+      "source_id": "bd-goldenscape-2021-03-18",
+      "source_name": "Business Daily Africa",
+      "source_tier": "B",
+      "url": "https://www.businessdailyafrica.com/bd/corporate/companies/goldenscape-with-fraud-in-greenhouses-deal-3327678",
+      "published_at": "2021-03-18T00:00:00+03:00",
+      "title": "Goldenscape boss charged with fraud in greenhouses deal"
+    },
+    {
+      "source_id": "kenyalaw-goldenscape-2023",
+      "source_name": "Kenya Law",
+      "source_tier": "A",
+      "url": "https://new.kenyalaw.org/akn/ke/judgment/kehc/2023/836/eng%402023-02-09",
+      "published_at": "2023-02-09T00:00:00+03:00",
+      "title": "Asset Recovery Agency v Muriithi & others"
+    }
+  ],
+  "indicator_events": [
+    {
+      "observed_at": "2020-03-06T00:00:00+03:00",
+      "indicator": "WIDESPREAD_WITHDRAWAL_FAILURE",
+      "confirmed": true,
+      "confidence": 0.9,
+      "source_ids": [
+        "mwakilishi-goldenscape-2020-03-06"
+      ],
+      "note": "Investors publicly reported missed promised payments and revised contracts."
+    },
+    {
+      "observed_at": "2020-03-06T00:00:00+03:00",
+      "indicator": "EXTREME_RETURN",
+      "confirmed": true,
+      "confidence": 1,
+      "source_ids": [
+        "mwakilishi-goldenscape-2020-03-06"
+      ],
+      "note": "One package was reported as promising KSh550,000 annual returns on KSh320,000."
+    }
+  ],
+  "milestones": [
+    {
+      "milestone_type": "PUBLIC_PAYMENT_FAILURE_REPORT",
+      "occurred_at": "2020-03-06T00:00:00+03:00",
+      "first_documented_at": "2020-03-06T00:00:00+03:00",
+      "source_ids": [
+        "mwakilishi-goldenscape-2020-03-06"
+      ],
+      "note": "Public reporting of non-payment."
+    },
+    {
+      "milestone_type": "CRIMINAL_CHARGE",
+      "occurred_at": "2021-03-18T00:00:00+03:00",
+      "first_documented_at": "2021-03-18T00:00:00+03:00",
+      "source_ids": [
+        "bd-goldenscape-2021-03-18"
+      ],
+      "note": "Director charged; allegations remained for trial."
+    }
+  ],
+  "lifecycle_stages": [
+    {
+      "stage": "AGRICULTURE_INVESTMENT_RECRUITMENT",
+      "started_at": "2014-01-01T00:00:00+03:00",
+      "ended_at": "2020-03-01T00:00:00+03:00",
+      "first_documented_at": "2023-02-09T00:00:00+03:00",
+      "source_ids": [
+        "kenyalaw-goldenscape-2023"
+      ],
+      "note": "Asset-recovery proceedings described public funds received over 2014-2020."
+    },
+    {
+      "stage": "PAYMENT_FAILURE",
+      "started_at": "2020-03-01T00:00:00+03:00",
+      "ended_at": null,
+      "first_documented_at": "2020-03-06T00:00:00+03:00",
+      "source_ids": [
+        "mwakilishi-goldenscape-2020-03-06"
+      ],
+      "note": "Investors reported missed returns."
+    },
+    {
+      "stage": "ENFORCEMENT",
+      "started_at": "2021-03-18T00:00:00+03:00",
+      "ended_at": null,
+      "first_documented_at": "2021-03-18T00:00:00+03:00",
+      "source_ids": [
+        "bd-goldenscape-2021-03-18"
+      ],
+      "note": "Criminal charge and later asset-recovery litigation."
+    }
+  ],
+  "impact_estimates": [
+    {
+      "metric": "funds_received_public",
+      "value": 1488483438.4,
+      "unit": "KES",
+      "confidence": "high",
+      "as_of": "2023-02-09T00:00:00+03:00",
+      "source_ids": [
+        "kenyalaw-goldenscape-2023"
+      ],
+      "note": "Amount cited in asset-recovery proceedings for 2014-2020."
+    }
+  ],
+  "legal_events": [
+    {
+      "event_type": "CRIMINAL_CHARGE",
+      "occurred_at": "2021-03-18T00:00:00+03:00",
+      "source_ids": [
+        "bd-goldenscape-2021-03-18"
+      ],
+      "status": "charged",
+      "note": "Charges are not a conviction."
+    },
+    {
+      "event_type": "ASSET_RECOVERY_PROCEEDINGS",
+      "occurred_at": "2023-02-09T00:00:00+03:00",
+      "source_ids": [
+        "kenyalaw-goldenscape-2023"
+      ],
+      "status": "court-proceedings",
+      "note": "Kenya Law ruling in Asset Recovery Agency proceedings."
+    }
+  ],
+  "notes": [
+    "The case combines criminal allegations and civil asset-recovery proceedings; Dawnwatch preserves those distinctions."
+  ]
+}
