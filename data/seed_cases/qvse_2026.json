@@ -62,16 +62,20 @@
       "observed_at": "2026-07-22T00:00:00+00:00",
       "indicator": "FOREIGN_REGULATOR_WARNING",
       "confirmed": true,
-      "confidence": 1.0,
-      "source_ids": ["sec-gh-2026-07-22"],
+      "confidence": 1,
+      "source_ids": [
+        "sec-gh-2026-07-22"
+      ],
       "note": "Ghana SEC included Quant Vest Stock Exchange (QVSE) in its list of entities operating without a licence in Ghana."
     },
     {
       "observed_at": "2026-09-11T00:00:00+03:00",
       "indicator": "LOCAL_REGULATOR_WARNING",
       "confirmed": true,
-      "confidence": 1.0,
-      "source_ids": ["cma-ke-2026-09-11"],
+      "confidence": 1,
+      "source_ids": [
+        "cma-ke-2026-09-11"
+      ],
       "note": "Kenya CMA cautioned the public against QVSE among entities purporting to offer investment services without requisite licensing or approval."
     },
     {
@@ -79,7 +83,9 @@
       "indicator": "WIDESPREAD_WITHDRAWAL_FAILURE",
       "confirmed": true,
       "confidence": 0.9,
-      "source_ids": ["bd-2026-09-14"],
+      "source_ids": [
+        "bd-2026-09-14"
+      ],
       "note": "Business Daily reported investor accounts frozen and withdrawals failing to materialise for many investors."
     },
     {
@@ -87,7 +93,9 @@
       "indicator": "PAY_TO_UNLOCK_WITHDRAWAL",
       "confirmed": true,
       "confidence": 0.95,
-      "source_ids": ["bd-2026-09-14"],
+      "source_ids": [
+        "bd-2026-09-14"
+      ],
       "note": "Reporting described demands for an additional deposit to verify or reactivate accounts."
     },
     {
@@ -95,7 +103,9 @@
       "indicator": "FAILED_PREDECESSOR_LINK",
       "confirmed": true,
       "confidence": 0.9,
-      "source_ids": ["bd-2026-09-18"],
+      "source_ids": [
+        "bd-2026-09-18"
+      ],
       "note": "Business Daily linked the operator and GIG banner to an earlier failed platform, PCEX."
     }
   ],
@@ -103,5 +113,34 @@
     "This fixture stores the date evidence became publicly available to Dawnwatch, not merely the date of the underlying event.",
     "Later investigative reporting must not be used in an earlier historical replay.",
     "This case is a benchmark fixture, not a substitute for the eventual full case dossier."
+  ],
+  "milestones": [
+    {
+      "milestone_type": "WITHDRAWAL_FREEZE",
+      "occurred_at": "2026-09-05T00:00:00+03:00",
+      "first_documented_at": "2026-09-14T00:00:00+03:00",
+      "source_ids": [
+        "bd-2026-09-14"
+      ],
+      "note": "Business Daily later reported that QVSE accounts were frozen on 5 September 2026."
+    },
+    {
+      "milestone_type": "KENYA_REGULATOR_WARNING",
+      "occurred_at": "2026-09-11T00:00:00+03:00",
+      "first_documented_at": "2026-09-11T00:00:00+03:00",
+      "source_ids": [
+        "cma-ke-2026-09-11"
+      ],
+      "note": "Kenya CMA publicly cautioned against QVSE and other named entities."
+    },
+    {
+      "milestone_type": "SUCCESSOR_PLATFORM_REPORTED",
+      "occurred_at": "2026-09-23T00:00:00+03:00",
+      "first_documented_at": "2026-09-23T00:00:00+03:00",
+      "source_ids": [
+        "bd-2026-09-23"
+      ],
+      "note": "Business Daily reported that investors were being directed toward Apollo."
+    }
   ]
 }
