@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from dawnwatch.history import load_case, replay_case
+from dawnwatch.history import lead_time_days, load_case, replay_case
 from dawnwatch.models import RiskState
 
 
@@ -35,3 +35,12 @@ def test_post_freeze_reporting_does_not_affect_july_snapshot() -> None:
     assert "WIDESPREAD_WITHDRAWAL_FAILURE" not in values
     assert "PAY_TO_UNLOCK_WITHDRAWAL" not in values
     assert "FAILED_PREDECESSOR_LINK" not in values
+
+
+def test_qvse_elevated_caution_precedes_reported_freeze_by_45_days() -> None:
+    case = load_case(CASE_PATH)
+    assert lead_time_days(
+        case,
+        RiskState.ELEVATED_CAUTION,
+        "WITHDRAWAL_FREEZE",
+    ) == 45
