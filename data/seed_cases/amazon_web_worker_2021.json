@@ -134,5 +134,11 @@
   ],
   "notes": [
     "Benchmark eligibility is limited to lead time between public collapse reporting and later enforcement; it is not yet an early-loss-prevention benchmark."
-  ]
+  ],
+  "benchmark_definition": {
+    "benchmark_kind": "enforcement_lead",
+    "target_state": "ELEVATED CAUTION",
+    "milestone_type": "DCI_ARREST",
+    "interpretation": "Public collapse/high-return reporting to DCI arrest; not a pre-loss benchmark."
+  }
 }
