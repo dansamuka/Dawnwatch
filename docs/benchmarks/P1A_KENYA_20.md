@@ -221,7 +221,9 @@ Only after the positive and control cohorts exist should Dawnwatch materially re
 
 ## 10. P1A completion definition
 
-P1A was completed as the 20-case baseline. P1B later deepened selected cases without changing the corpus membership.\n\n## 10. P1A completion definition\n\nP1A is complete when:
+P1A was completed as the 20-case baseline. P1B later deepened selected cases without changing the corpus membership.
+
+P1A is complete when:
 
 - [x] 20 unique Kenyan historical cases exist;
 - [x] all 20 load through one canonical schema;
