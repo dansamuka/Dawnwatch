@@ -49,3 +49,20 @@ def test_archive_replay_respects_historical_date() -> None:
     )
     assert response.status_code == 200
     assert response.json()["state"] == "ELEVATED CAUTION"
+
+
+def test_archive_stats_show_p1a_twenty_cases() -> None:
+    response = client.get("/api/v1/archive/stats")
+    assert response.status_code == 200
+    payload = response.json()
+    assert payload["total_cases"] == 20
+    assert payload["archive_complete"] == 20
+    assert payload["benchmark_eligible"] == 5
+    assert payload["cases_with_quality_issues"] == 0
+
+
+def test_archive_benchmarks_include_qvse_lead_time() -> None:
+    response = client.get("/api/v1/archive/benchmarks")
+    assert response.status_code == 200
+    results = {item["case_id"]: item for item in response.json()}
+    assert results["kenya-qvse-2026"]["lead_time_days"] == 45
