@@ -5,7 +5,7 @@ from datetime import datetime
 from pydantic import BaseModel
 
 from dawnwatch.archive import ArchiveRepository
-from dawnwatch.history import HistoricalCase, STATE_RANK, first_reached_state
+from dawnwatch.history import HistoricalCase, first_reached_state
 from dawnwatch.models import RiskState
 
 
