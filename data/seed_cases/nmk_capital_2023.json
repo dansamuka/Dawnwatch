@@ -1,0 +1,130 @@
+{
+  "case_id": "kenya-nmk-capital-2023",
+  "canonical_name": "NMK Capital Investment Limited",
+  "aliases": [
+    "NMK Capital",
+    "NMK Capital Investment Limited"
+  ],
+  "jurisdiction": "Kenya",
+  "category": [
+    "investment",
+    "suspected-pyramid-scheme",
+    "mass-recruitment"
+  ],
+  "active_from": "2021-01-01T00:00:00+03:00",
+  "active_to": null,
+  "outcome_status": "law-enforcement-investigation",
+  "archive_quality": "archive-complete",
+  "benchmark_eligible": false,
+  "sources": [
+    {
+      "source_id": "k24-nmk-2023-09-07",
+      "source_name": "K24 Digital reporting DCI warning",
+      "source_tier": "B",
+      "url": "https://k24.digital/uncategorized/dci-cautions-public-against-nmk-scheme",
+      "published_at": "2023-09-07T14:16:00+03:00",
+      "title": "DCI cautions public against city investment scheme"
+    },
+    {
+      "source_id": "dci-crypto-mag-2024",
+      "source_name": "Directorate of Criminal Investigations",
+      "source_tier": "A",
+      "url": "https://www.dci.go.ke/sites/default/files/2024-05/The%20DCI%20Magazine%20April%202024%209th%20Edition.pdf",
+      "published_at": "2024-04-01T00:00:00+03:00",
+      "title": "Cryptocurrency Fraud in Kenya / DCI Magazine"
+    }
+  ],
+  "indicator_events": [
+    {
+      "observed_at": "2023-09-07T14:16:00+03:00",
+      "indicator": "AUTHORITATIVE_GOVERNMENT_FINDING",
+      "confirmed": true,
+      "confidence": 0.95,
+      "source_ids": [
+        "k24-nmk-2023-09-07"
+      ],
+      "note": "DCI publicly cautioned Kenyans against transacting with what it described as a suspected pyramid scheme under active investigation."
+    },
+    {
+      "observed_at": "2023-09-07T14:16:00+03:00",
+      "indicator": "EXTREME_RETURN",
+      "confirmed": true,
+      "confidence": 1,
+      "source_ids": [
+        "k24-nmk-2023-09-07"
+      ],
+      "note": "DCI said investors were offered 15% monthly interest on a six-month contract."
+    }
+  ],
+  "milestones": [
+    {
+      "milestone_type": "DCI_PUBLIC_WARNING",
+      "occurred_at": "2023-09-07T14:16:00+03:00",
+      "first_documented_at": "2023-09-07T14:16:00+03:00",
+      "source_ids": [
+        "k24-nmk-2023-09-07"
+      ],
+      "note": "DCI public caution."
+    }
+  ],
+  "lifecycle_stages": [
+    {
+      "stage": "MASS_RECRUITMENT",
+      "started_at": "2021-01-01T00:00:00+03:00",
+      "ended_at": null,
+      "first_documented_at": "2023-09-07T14:16:00+03:00",
+      "source_ids": [
+        "k24-nmk-2023-09-07"
+      ],
+      "note": "DCI said more than 5,000 investors had entered contracts with a minimum KSh50,000 investment."
+    },
+    {
+      "stage": "COMPLAINTS_AND_INVESTIGATION",
+      "started_at": null,
+      "ended_at": null,
+      "first_documented_at": "2023-09-07T14:16:00+03:00",
+      "source_ids": [
+        "k24-nmk-2023-09-07"
+      ],
+      "note": "DCI reported numerous complaints and an active investigation."
+    }
+  ],
+  "impact_estimates": [
+    {
+      "metric": "reported_investors",
+      "lower_bound": 5000,
+      "unit": "people",
+      "confidence": "high",
+      "as_of": "2023-09-07T14:16:00+03:00",
+      "source_ids": [
+        "k24-nmk-2023-09-07"
+      ],
+      "note": "DCI reported over 5,000 investors."
+    },
+    {
+      "metric": "reported_loss",
+      "value": 70000000,
+      "unit": "KES",
+      "confidence": "medium",
+      "as_of": "2024-04-01T00:00:00+03:00",
+      "source_ids": [
+        "dci-crypto-mag-2024"
+      ],
+      "note": "DCI magazine described an estimated KSh70 million in question."
+    }
+  ],
+  "legal_events": [
+    {
+      "event_type": "LAW_ENFORCEMENT_INVESTIGATION",
+      "occurred_at": "2023-09-07T14:16:00+03:00",
+      "source_ids": [
+        "k24-nmk-2023-09-07"
+      ],
+      "status": "active-investigation",
+      "note": "DCI stated NMK Capital and a sister company were under active investigation."
+    }
+  ],
+  "notes": [
+    "Dawnwatch records the DCI description as an official law-enforcement warning; it does not convert an investigation into a conviction."
+  ]
+}
