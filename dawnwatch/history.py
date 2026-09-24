@@ -71,6 +71,13 @@ class HistoricalLegalEvent(BaseModel):
     note: str | None = None
 
 
+class HistoricalBenchmarkDefinition(BaseModel):
+    benchmark_kind: str
+    target_state: RiskState = RiskState.ELEVATED_CAUTION
+    milestone_type: str
+    interpretation: str
+
+
 class HistoricalCase(BaseModel):
     case_id: str
     canonical_name: str
@@ -82,6 +89,7 @@ class HistoricalCase(BaseModel):
     outcome_status: str | None = None
     archive_quality: str = "developing"
     benchmark_eligible: bool = False
+    benchmark_definition: HistoricalBenchmarkDefinition | None = None
     sources: list[HistoricalSource] = Field(default_factory=list)
     indicator_events: list[HistoricalIndicatorEvent] = Field(default_factory=list)
     milestones: list[HistoricalMilestone] = Field(default_factory=list)
@@ -148,6 +156,15 @@ def quality_issues(case: HistoricalCase) -> list[str]:
             issues.append("benchmark_without_indicators")
         if not case.milestones:
             issues.append("benchmark_without_milestones")
+        if case.benchmark_definition is None:
+            issues.append("benchmark_without_definition")
+        elif not any(
+            milestone.milestone_type == case.benchmark_definition.milestone_type
+            for milestone in case.milestones
+        ):
+            issues.append("benchmark_target_milestone_missing")
+    elif case.benchmark_definition is not None:
+        issues.append("benchmark_definition_on_ineligible_case")
 
     return issues
 
