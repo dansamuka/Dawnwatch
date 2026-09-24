@@ -1,0 +1,59 @@
+{
+  "control_id": "control-ke-old-mutual-mmf",
+  "canonical_name": "Old Mutual Money Market Fund",
+  "jurisdiction": "Kenya",
+  "control_type": "regulated_collective_investment_scheme",
+  "matched_patterns": [
+    "MASS_MARKET",
+    "RETURN_SEEKING",
+    "MONEY_MARKET",
+    "LONG_OPERATING_HISTORY"
+  ],
+  "expected_max_state": "WATCH",
+  "sources": [
+    {
+      "source_id": "cma-approved-cis-register-2026-09-24",
+      "source_name": "Capital Markets Authority Kenya — Approved Collective Investment Schemes register",
+      "source_tier": "A",
+      "url": "https://licensees.cma.or.ke/licenses/15/",
+      "published_at": null,
+      "observed_at": "2026-09-24T13:19:00+03:00",
+      "title": "Approved Collective Investment Schemes"
+    },
+    {
+      "source_id": "cma-annual-report-2018",
+      "source_name": "Capital Markets Authority Kenya",
+      "source_tier": "A",
+      "url": "https://www.cma.or.ke/wp-content/uploads/2023/03/Capital-Markets-Annual-Report-2018.pdf",
+      "published_at": "2018-12-31T00:00:00+03:00",
+      "observed_at": "2026-09-24T13:19:00+03:00",
+      "title": "Capital Markets Authority Annual Report 2018"
+    }
+  ],
+  "verification_events": [
+    {
+      "observed_at": "2026-09-24T13:19:00+03:00",
+      "verification_type": "CURRENT_REGISTER_MATCH",
+      "source_ids": [
+        "cma-approved-cis-register-2026-09-24"
+      ],
+      "note": "Old Mutual Unit Trust products are represented in the CMA register."
+    },
+    {
+      "observed_at": "2018-12-31T00:00:00+03:00",
+      "verification_type": "HISTORICAL_REGULATOR_RECORD",
+      "source_ids": [
+        "cma-annual-report-2018"
+      ],
+      "note": "CMA annual-report material lists the Old Mutual Money Market Fund."
+    }
+  ],
+  "positive_indicators": [
+    "VERIFIED_RELEVANT_LICENCE"
+  ],
+  "surface_risk_indicators": [],
+  "sample_marketing_text": "Invest in a professionally managed money market fund seeking income from short-term fixed-income and money-market instruments.",
+  "notes": [
+    "A mature regulated product provides a useful contrast to recently created schemes."
+  ]
+}
