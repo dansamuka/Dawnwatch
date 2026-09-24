@@ -1,0 +1,122 @@
+{
+  "case_id": "kenya-mont-blanq-afrique-2009",
+  "canonical_name": "Mont Blanq Afrique",
+  "aliases": [
+    "Mont Blanq Afrique",
+    "Mont Blanc Afrique",
+    "Monte Blanc Afrique"
+  ],
+  "jurisdiction": "Kenya",
+  "category": [
+    "pyramid-scheme",
+    "mass-recruitment",
+    "deposit-taking"
+  ],
+  "active_from": null,
+  "active_to": null,
+  "outcome_status": "government-taskforce-identified",
+  "archive_quality": "archive-complete",
+  "benchmark_eligible": false,
+  "sources": [
+    {
+      "source_id": "kenya-taskforce-2009",
+      "source_name": "Republic of Kenya Taskforce on Pyramid Schemes (archived copy)",
+      "source_tier": "C",
+      "url": "https://www.slideshare.net/slideshow/report-of-the-taskforce-on-pyramid-schemes/2816374",
+      "published_at": "2009-06-24T00:00:00+03:00",
+      "title": "Report of the Taskforce on Pyramid Schemes"
+    },
+    {
+      "source_id": "bt-2017-pyramid-history",
+      "source_name": "Business Today Kenya",
+      "source_tier": "B",
+      "url": "https://businesstoday.co.ke/kenyans-continue-lose-money-pyramid-schemes/",
+      "published_at": "2017-04-10T00:00:00+03:00",
+      "title": "Why Kenyans continue to lose money to pyramid schemes"
+    }
+  ],
+  "indicator_events": [
+    {
+      "observed_at": "2009-06-24T00:00:00+03:00",
+      "indicator": "AUTHORITATIVE_GOVERNMENT_FINDING",
+      "confirmed": true,
+      "confidence": 1,
+      "source_ids": [
+        "kenya-taskforce-2009"
+      ],
+      "note": "Kenya's Pyramid Schemes Taskforce listed the entity among schemes recorded during its national claims-registration exercise."
+    }
+  ],
+  "milestones": [
+    {
+      "milestone_type": "GOVERNMENT_TASKFORCE_REPORT",
+      "occurred_at": "2009-06-24T00:00:00+03:00",
+      "first_documented_at": "2009-06-24T00:00:00+03:00",
+      "source_ids": [
+        "kenya-taskforce-2009"
+      ],
+      "note": "Taskforce report received by the Ministry in June 2009."
+    }
+  ],
+  "lifecycle_stages": [
+    {
+      "stage": "MASS_RECRUITMENT_AND_DEPOSIT_TAKING",
+      "started_at": null,
+      "ended_at": null,
+      "first_documented_at": "2009-06-24T00:00:00+03:00",
+      "source_ids": [
+        "kenya-taskforce-2009"
+      ],
+      "note": "Reconstructed from the government taskforce's claims-registration record."
+    },
+    {
+      "stage": "COLLAPSE_AND_CLAIMS_REGISTRATION",
+      "started_at": null,
+      "ended_at": "2009-06-24T00:00:00+03:00",
+      "first_documented_at": "2009-06-24T00:00:00+03:00",
+      "source_ids": [
+        "kenya-taskforce-2009"
+      ],
+      "note": "The taskforce recorded investor claims after collapse or failure of the scheme."
+    }
+  ],
+  "impact_estimates": [
+    {
+      "metric": "registered_investors",
+      "value": 774,
+      "unit": "people",
+      "confidence": "high",
+      "as_of": "2009-06-24T00:00:00+03:00",
+      "source_ids": [
+        "kenya-taskforce-2009"
+      ],
+      "note": "Registered claims count in the taskforce report."
+    },
+    {
+      "metric": "registered_claim_value",
+      "value": 82834000,
+      "unit": "KES",
+      "confidence": "high",
+      "as_of": "2009-06-24T00:00:00+03:00",
+      "source_ids": [
+        "kenya-taskforce-2009"
+      ],
+      "note": "Amount recorded through the taskforce claims-registration exercise."
+    }
+  ],
+  "legal_events": [
+    {
+      "event_type": "GOVERNMENT_TASKFORCE_CLASSIFICATION",
+      "occurred_at": "2009-06-24T00:00:00+03:00",
+      "source_ids": [
+        "kenya-taskforce-2009"
+      ],
+      "status": "historical-government-finding",
+      "note": "This is a government taskforce finding, not a criminal conviction of every associated individual."
+    }
+  ],
+  "notes": [
+    "The taskforce recorded KSh82.834 million in registered claims.",
+    "This legacy case is archive-complete but not currently marked benchmark-eligible because the seeded evidence does not yet establish a scheme-specific warning before collapse."
+  ]
+}
