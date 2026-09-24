@@ -125,5 +125,11 @@
   "legal_events": [],
   "notes": [
     "The widely circulated 'Sh2 trillion' figure in article headlines relates to broader global click-fraud estimates and is not treated as a Kenya Public Likes loss estimate."
-  ]
+  ],
+  "benchmark_definition": {
+    "benchmark_kind": "pre_disruption_warning",
+    "target_state": "ELEVATED CAUTION",
+    "milestone_type": "MPESA_PAYBILL_SUSPENDED",
+    "interpretation": "Public structural warning to payment-channel suspension."
+  }
 }
