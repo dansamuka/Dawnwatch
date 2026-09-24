@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-import json
+from collections import Counter
 from datetime import datetime
 from pathlib import Path
 
@@ -8,7 +8,13 @@ from pydantic import BaseModel, Field
 
 from dawnwatch.discovery import DiscoveryAnalysis, analyze_text
 from dawnwatch.history import HistoricalSource, STATE_RANK
-from dawnwatch.models import ActivatedIndicator, IndicatorType, RiskAssessment, RiskEvaluationRequest, RiskState
+from dawnwatch.models import (
+    ActivatedIndicator,
+    IndicatorType,
+    RiskAssessment,
+    RiskEvaluationRequest,
+    RiskState,
+)
 from dawnwatch.risk_engine import evaluate
 
 
@@ -44,6 +50,16 @@ class ControlAssessment(BaseModel):
     discovery_should_open_candidate: bool
     discovery_false_positive: bool
     matched_patterns: list[str]
+
+
+class ControlStats(BaseModel):
+    total_controls: int
+    quality_clean: int
+    risk_false_positives: int
+    discovery_false_positives: int
+    tier_a_source_references: int
+    tier_b_source_references: int
+    matched_patterns: dict[str, int]
 
 
 def load_control(path: str | Path) -> ControlCase:
@@ -120,6 +136,21 @@ class ControlRepository:
 
     def assessments(self) -> list[ControlAssessment]:
         return [evaluate_control(case) for case in self.all_controls()]
+
+    def stats(self) -> ControlStats:
+        cases = self.all_controls()
+        assessments = [evaluate_control(case) for case in cases]
+        patterns = Counter(pattern for case in cases for pattern in case.matched_patterns)
+        sources = [source for case in cases for source in case.sources]
+        return ControlStats(
+            total_controls=len(cases),
+            quality_clean=sum(not control_quality_issues(case) for case in cases),
+            risk_false_positives=sum(item.risk_false_positive for item in assessments),
+            discovery_false_positives=sum(item.discovery_false_positive for item in assessments),
+            tier_a_source_references=sum(source.source_tier == "A" for source in sources),
+            tier_b_source_references=sum(source.source_tier == "B" for source in sources),
+            matched_patterns=dict(sorted(patterns.items())),
+        )
 
 
 def default_controls() -> ControlRepository:
