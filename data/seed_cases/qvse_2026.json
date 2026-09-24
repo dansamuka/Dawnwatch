@@ -230,5 +230,11 @@
       "status": "pleaded-not-guilty",
       "note": "Business Daily reported charges against two alleged local agents. Charges remain allegations unless proven."
     }
-  ]
+  ],
+  "benchmark_definition": {
+    "benchmark_kind": "loss_prevention",
+    "target_state": "ELEVATED CAUTION",
+    "milestone_type": "WITHDRAWAL_FREEZE",
+    "interpretation": "Foreign-regulator warning to reported account freeze."
+  }
 }
