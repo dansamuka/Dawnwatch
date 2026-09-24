@@ -1,0 +1,59 @@
+{
+  "control_id": "control-ke-sanlam-unit-trust",
+  "canonical_name": "Sanlam Unit Trust Funds",
+  "jurisdiction": "Kenya",
+  "control_type": "regulated_collective_investment_scheme",
+  "matched_patterns": [
+    "MASS_MARKET",
+    "RETURN_SEEKING",
+    "UNIT_TRUST",
+    "MULTI_FUND"
+  ],
+  "expected_max_state": "WATCH",
+  "sources": [
+    {
+      "source_id": "cma-approved-cis-register-2026-09-24",
+      "source_name": "Capital Markets Authority Kenya — Approved Collective Investment Schemes register",
+      "source_tier": "A",
+      "url": "https://licensees.cma.or.ke/licenses/15/",
+      "published_at": null,
+      "observed_at": "2026-09-24T13:19:00+03:00",
+      "title": "Approved Collective Investment Schemes"
+    },
+    {
+      "source_id": "cma-sanlam-2025-07-14",
+      "source_name": "Capital Markets Authority Kenya",
+      "source_tier": "A",
+      "url": "https://www.cma.or.ke/cma-approves-new-collective-investment-schemes-and-sub-funds/",
+      "published_at": "2025-07-14T00:00:00+03:00",
+      "observed_at": "2026-09-24T13:19:00+03:00",
+      "title": "CMA Approves New Collective Investment Schemes and Sub-Funds"
+    }
+  ],
+  "verification_events": [
+    {
+      "observed_at": "2026-09-24T13:19:00+03:00",
+      "verification_type": "CURRENT_REGISTER_MATCH",
+      "source_ids": [
+        "cma-approved-cis-register-2026-09-24"
+      ],
+      "note": "Sanlam Unit Trust Funds appear in the CMA approved CIS register."
+    },
+    {
+      "observed_at": "2025-07-14T00:00:00+03:00",
+      "verification_type": "ADDITIONAL_SUBFUND_APPROVAL",
+      "source_ids": [
+        "cma-sanlam-2025-07-14"
+      ],
+      "note": "CMA approved an additional sub-fund under Sanlam's existing structure."
+    }
+  ],
+  "positive_indicators": [
+    "VERIFIED_RELEVANT_LICENCE"
+  ],
+  "surface_risk_indicators": [],
+  "sample_marketing_text": "Choose from regulated unit trust funds offering professionally managed exposure to money-market, fixed-income and diversified assets.",
+  "notes": [
+    "Matched to diversified-investment marketing while carrying direct regulatory verification."
+  ]
+}
