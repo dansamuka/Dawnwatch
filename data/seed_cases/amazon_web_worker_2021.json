@@ -1,0 +1,138 @@
+{
+  "case_id": "kenya-amazon-web-worker-2021",
+  "canonical_name": "Amazon Web Worker",
+  "aliases": [
+    "Amazon Web Worker Africa"
+  ],
+  "jurisdiction": "Kenya",
+  "category": [
+    "e-commerce-task-scam",
+    "investment",
+    "referral",
+    "app-based"
+  ],
+  "active_from": null,
+  "active_to": "2021-05-16T00:00:00+03:00",
+  "outcome_status": "collapsed-and-investigated",
+  "archive_quality": "archive-complete",
+  "benchmark_eligible": true,
+  "sources": [
+    {
+      "source_id": "bt-amazon-2021-05-17",
+      "source_name": "Business Today Kenya",
+      "source_tier": "B",
+      "url": "https://businesstoday.co.ke/amazon-web-worker-scam-kenyans-lose-millions-to-online-ponzi-scheme/",
+      "published_at": "2021-05-17T00:00:00+03:00",
+      "title": "Amazon Web Worker Scam: Kenyans Lose Millions to Online Ponzi Scheme"
+    },
+    {
+      "source_id": "dci-amazon-2021-05-29",
+      "source_name": "Directorate of Criminal Investigations (thread archive)",
+      "source_tier": "B",
+      "url": "https://threadreaderapp.com/thread/1398703301835776002.html",
+      "published_at": "2021-05-29T00:00:00+03:00",
+      "title": "DCI statement on Amazon Web Worker arrest"
+    }
+  ],
+  "indicator_events": [
+    {
+      "observed_at": "2021-05-17T00:00:00+03:00",
+      "indicator": "EXTREME_RETURN",
+      "confirmed": true,
+      "confidence": 1,
+      "source_ids": [
+        "bt-amazon-2021-05-17"
+      ],
+      "note": "The scheme advertised returns up to roughly 38% on a seven-day deposit."
+    },
+    {
+      "observed_at": "2021-05-17T00:00:00+03:00",
+      "indicator": "WIDESPREAD_WITHDRAWAL_FAILURE",
+      "confirmed": true,
+      "confidence": 0.9,
+      "source_ids": [
+        "bt-amazon-2021-05-17"
+      ],
+      "note": "Users reported losses after the app disappeared/deleted."
+    }
+  ],
+  "milestones": [
+    {
+      "milestone_type": "APP_DISAPPEARED",
+      "occurred_at": "2021-05-16T00:00:00+03:00",
+      "first_documented_at": "2021-05-17T00:00:00+03:00",
+      "source_ids": [
+        "bt-amazon-2021-05-17"
+      ],
+      "note": "Investors reported the app had been deleted."
+    },
+    {
+      "milestone_type": "DCI_ARREST",
+      "occurred_at": "2021-05-28T00:00:00+03:00",
+      "first_documented_at": "2021-05-29T00:00:00+03:00",
+      "source_ids": [
+        "dci-amazon-2021-05-29"
+      ],
+      "note": "DCI announced an arrest linked to the scheme."
+    }
+  ],
+  "lifecycle_stages": [
+    {
+      "stage": "RECRUITMENT_AND_APP_DEPOSITS",
+      "started_at": null,
+      "ended_at": "2021-05-16T00:00:00+03:00",
+      "first_documented_at": "2021-05-17T00:00:00+03:00",
+      "source_ids": [
+        "bt-amazon-2021-05-17"
+      ],
+      "note": "Users paid into an app promising returns and referral/task income."
+    },
+    {
+      "stage": "COLLAPSE",
+      "started_at": "2021-05-16T00:00:00+03:00",
+      "ended_at": null,
+      "first_documented_at": "2021-05-17T00:00:00+03:00",
+      "source_ids": [
+        "bt-amazon-2021-05-17"
+      ],
+      "note": "The app disappeared and users reported losses."
+    },
+    {
+      "stage": "ENFORCEMENT",
+      "started_at": "2021-05-28T00:00:00+03:00",
+      "ended_at": null,
+      "first_documented_at": "2021-05-29T00:00:00+03:00",
+      "source_ids": [
+        "dci-amazon-2021-05-29"
+      ],
+      "note": "DCI announced an arrest."
+    }
+  ],
+  "impact_estimates": [
+    {
+      "metric": "reported_loss",
+      "lower_bound": 1000000,
+      "unit": "KES",
+      "confidence": "low",
+      "as_of": "2021-05-29T00:00:00+03:00",
+      "source_ids": [
+        "dci-amazon-2021-05-29"
+      ],
+      "note": "DCI described millions of shillings obtained; this fixture intentionally avoids a larger unsupported aggregate."
+    }
+  ],
+  "legal_events": [
+    {
+      "event_type": "ARREST",
+      "occurred_at": "2021-05-28T00:00:00+03:00",
+      "source_ids": [
+        "dci-amazon-2021-05-29"
+      ],
+      "status": "investigation",
+      "note": "Arrest does not establish guilt."
+    }
+  ],
+  "notes": [
+    "Benchmark eligibility is limited to lead time between public collapse reporting and later enforcement; it is not yet an early-loss-prevention benchmark."
+  ]
+}
