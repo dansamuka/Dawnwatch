@@ -130,6 +130,12 @@ def quality_issues(case: HistoricalCase) -> list[str]:
     if not any(source.source_tier in {"A", "B"} for source in case.sources):
         issues.append("no_tier_a_or_b_source")
 
+    if any(
+        source.published_at is None and source.observed_at is None
+        for source in case.sources
+    ):
+        issues.append("source_without_time_provenance")
+
     referenced: set[str] = set()
     for event in case.indicator_events:
         referenced.update(event.source_ids)
