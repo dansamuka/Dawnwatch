@@ -30,7 +30,7 @@ WEIGHTS: dict[IndicatorType, int] = {
     IndicatorType.RECENT_ENTITY_OR_DOMAIN: 8,
     IndicatorType.CRYPTO_ONLY_PAYMENT: 8,
     IndicatorType.VERIFIED_RELEVANT_LICENCE: -25,
-    IndicatorType.VERIFIED_REGULATED_CUSTODY: -20,
+    IndicatorType.VERIFIED_REGULATED_CUSTODY: -20,\n    IndicatorType.AUTHORITATIVE_GOVERNMENT_FINDING: 45,
 }
 
 
@@ -51,7 +51,7 @@ def evaluate(request: RiskEvaluationRequest) -> RiskAssessment:
     score = _score(request.indicators)
     reasons: list[str] = []
 
-    if IndicatorType.LOCAL_REGULATOR_WARNING in confirmed:
+    if IndicatorType.AUTHORITATIVE_GOVERNMENT_FINDING in confirmed:\n        state = RiskState.CRITICAL_WARNING\n        reasons.append("An authoritative government finding identifies the scheme as fraudulent or pyramid-like.")\n    elif IndicatorType.LOCAL_REGULATOR_WARNING in confirmed:
         state = RiskState.CRITICAL_WARNING
         reasons.append("A confirmed local regulator warning is present.")
     elif {
