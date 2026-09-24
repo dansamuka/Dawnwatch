@@ -1,7 +1,11 @@
-from fastapi import FastAPI
+from datetime import datetime
+
+from fastapi import FastAPI, HTTPException, Query
 from pydantic import BaseModel
 
+from dawnwatch.archive import CaseSummary, default_archive
 from dawnwatch.discovery import DiscoveryAnalysis, analyze_text
+from dawnwatch.history import HistoricalCase, replay_case
 from dawnwatch.models import RiskAssessment, RiskEvaluationRequest
 from dawnwatch.returns import ReturnAnalysis, ReturnClaim, analyze_return_claim
 from dawnwatch.risk_engine import METHODOLOGY_VERSION, WEIGHTS, evaluate
@@ -11,6 +15,8 @@ app = FastAPI(
     version="0.1.0",
     description="Mass Fraud Early Warning & Intelligence",
 )
+
+archive = default_archive()
 
 
 class TextDiscoveryRequest(BaseModel):
@@ -31,6 +37,32 @@ def methodology() -> dict[str, object]:
         ),
         "weights": {indicator.value: weight for indicator, weight in WEIGHTS.items()},
     }
+
+
+@app.get("/api/v1/archive/cases", response_model=list[CaseSummary])
+def archive_cases() -> list[CaseSummary]:
+    return archive.summaries()
+
+
+@app.get("/api/v1/archive/search", response_model=list[CaseSummary])
+def archive_search(q: str = Query(default="")) -> list[CaseSummary]:
+    return archive.search(q)
+
+
+@app.get("/api/v1/archive/cases/{case_id}", response_model=HistoricalCase)
+def archive_case(case_id: str) -> HistoricalCase:
+    case = archive.get(case_id)
+    if case is None:
+        raise HTTPException(status_code=404, detail="Historical case not found")
+    return case
+
+
+@app.get("/api/v1/archive/cases/{case_id}/replay", response_model=RiskAssessment)
+def archive_case_replay(case_id: str, as_of: datetime) -> RiskAssessment:
+    case = archive.get(case_id)
+    if case is None:
+        raise HTTPException(status_code=404, detail="Historical case not found")
+    return replay_case(case, as_of)
 
 
 @app.post("/api/v1/discovery/analyze-text", response_model=DiscoveryAnalysis)
