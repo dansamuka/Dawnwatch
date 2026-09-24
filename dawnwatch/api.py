@@ -6,6 +6,12 @@ from pydantic import BaseModel
 
 from dawnwatch.archive import ArchiveStats, CaseSummary, default_archive
 from dawnwatch.benchmark import CaseBenchmark, benchmark_archive
+from dawnwatch.controls import (
+    ControlAssessment,
+    ControlCase,
+    ControlStats,
+    default_controls,
+)
 from dawnwatch.discovery import DiscoveryAnalysis, analyze_text
 from dawnwatch.history import HistoricalCase, replay_case
 from dawnwatch.models import RiskAssessment, RiskEvaluationRequest
@@ -19,6 +25,7 @@ app = FastAPI(
 )
 
 archive = default_archive()
+controls = default_controls()
 
 
 class TextDiscoveryRequest(BaseModel):
@@ -75,6 +82,21 @@ def archive_case_replay(case_id: str, as_of: datetime) -> RiskAssessment:
     if case is None:
         raise HTTPException(status_code=404, detail="Historical case not found")
     return replay_case(case, as_of)
+
+
+@app.get("/api/v1/controls/stats", response_model=ControlStats)
+def control_stats() -> ControlStats:
+    return controls.stats()
+
+
+@app.get("/api/v1/controls", response_model=list[ControlCase])
+def control_cases() -> list[ControlCase]:
+    return controls.all_controls()
+
+
+@app.get("/api/v1/controls/assessments", response_model=list[ControlAssessment])
+def control_assessments() -> list[ControlAssessment]:
+    return controls.assessments()
 
 
 @app.post("/api/v1/discovery/analyze-text", response_model=DiscoveryAnalysis)
