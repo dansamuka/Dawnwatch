@@ -82,7 +82,7 @@ Five cases currently contain sufficiently dated evidence for repeatable benchmar
 | Case | First Elevated+ signal in seeded record | Later milestone | Lead time | Benchmark interpretation |
 |---|---|---|---:|---|
 | QVSE | Ghana SEC warning — 22 Jul 2026 | Reported account freeze — 5 Sep 2026 | **45 days** | Early-warning / loss-prevention relevant |
-| Public Likes | Public structural warning — 13 Jul 2017 | M-Pesa Paybill suspension — 24 Jul 2017 | **11 days** | Pre-disruption warning |
+| Public Likes | Public structural warning — 8 Jun 2017 | M-Pesa Paybill suspension — 24 Jul 2017 | **46 days** | Pre-disruption warning |
 | CBEX | Nigeria SEC warning — 17 Apr 2025 | Kenya CMA warning — 11 Sep 2026 | **512 days** | Cross-border recurrence / jurisdiction-transfer warning |
 | Goldenscape | Public payment-failure/high-return reporting — 6 Mar 2020 | DCI arrest — 27 Mar 2020 | **21 days** | Enforcement lead, not pre-loss |
 | Amazon Web Worker | Public collapse/high-return reporting — 17 May 2021 | DCI arrest — 28 May 2021 | **11 days** | Enforcement lead, not pre-loss |
@@ -221,7 +221,7 @@ Only after the positive and control cohorts exist should Dawnwatch materially re
 
 ## 10. P1A completion definition
 
-P1A is complete when:
+P1A was completed as the 20-case baseline. P1B later deepened selected cases without changing the corpus membership.\n\n## 10. P1A completion definition\n\nP1A is complete when:
 
 - [x] 20 unique Kenyan historical cases exist;
 - [x] all 20 load through one canonical schema;
