@@ -1,0 +1,129 @@
+{
+  "case_id": "kenya-public-likes-2017",
+  "canonical_name": "Public Likes",
+  "aliases": [
+    "PublicLikes",
+    "Public Likes Kenya"
+  ],
+  "jurisdiction": "Kenya",
+  "category": [
+    "click-to-earn",
+    "referral",
+    "online-ponzi",
+    "mass-recruitment"
+  ],
+  "active_from": "2017-01-01T00:00:00+03:00",
+  "active_to": "2017-07-24T00:00:00+03:00",
+  "outcome_status": "collapsed",
+  "archive_quality": "archive-complete",
+  "benchmark_eligible": true,
+  "sources": [
+    {
+      "source_id": "nw-publiclikes-2017-07-13",
+      "source_name": "Nairobi Wire",
+      "source_tier": "B",
+      "url": "https://nairobiwire.com/2017/07/public-likes-scam-continues-lure-fools.html",
+      "published_at": "2017-07-13T00:00:00+03:00",
+      "title": "Public Likes Scam Continues To Lure in More Fools"
+    },
+    {
+      "source_id": "standard-publiclikes-2017-07-30",
+      "source_name": "The Standard",
+      "source_tier": "B",
+      "url": "https://www.standardmedia.co.ke/article/2001249724/how-kenyans-were-lured-into-sh2-trillion-public-likes-scam",
+      "published_at": "2017-07-30T00:00:00+03:00",
+      "title": "How Kenyans were lured into Public Likes scam"
+    },
+    {
+      "source_id": "kw-publiclikes-2017-07-25",
+      "source_name": "The Kenyan Wall Street",
+      "source_tier": "B",
+      "url": "https://kenyanwallstreet.com/ponzi-safaricom-shuts-down-m-pesa-paybill-number-public-likes",
+      "published_at": "2017-07-25T00:00:00+03:00",
+      "title": "Safaricom shuts down M-Pesa Paybill number for Public Likes"
+    }
+  ],
+  "indicator_events": [
+    {
+      "observed_at": "2017-07-13T00:00:00+03:00",
+      "indicator": "DETERMINISTIC_RETURN",
+      "confirmed": true,
+      "confidence": 0.9,
+      "source_ids": [
+        "nw-publiclikes-2017-07-13"
+      ],
+      "note": "Public reporting challenged the economics of fixed click earnings relative to advertising revenue."
+    },
+    {
+      "observed_at": "2017-07-13T00:00:00+03:00",
+      "indicator": "REFERRAL_RECRUITMENT",
+      "confirmed": true,
+      "confidence": 0.9,
+      "source_ids": [
+        "nw-publiclikes-2017-07-13"
+      ],
+      "note": "The model included referral-linked earning mechanics."
+    },
+    {
+      "observed_at": "2017-07-25T00:00:00+03:00",
+      "indicator": "WIDESPREAD_WITHDRAWAL_FAILURE",
+      "confirmed": true,
+      "confidence": 1,
+      "source_ids": [
+        "kw-publiclikes-2017-07-25",
+        "standard-publiclikes-2017-07-30"
+      ],
+      "note": "Users reported non-payment and the M-Pesa Paybill was suspended."
+    }
+  ],
+  "milestones": [
+    {
+      "milestone_type": "MPESA_PAYBILL_SUSPENDED",
+      "occurred_at": "2017-07-24T00:00:00+03:00",
+      "first_documented_at": "2017-07-25T00:00:00+03:00",
+      "source_ids": [
+        "kw-publiclikes-2017-07-25"
+      ],
+      "note": "Safaricom suspended the Public Likes Paybill after complaints."
+    }
+  ],
+  "lifecycle_stages": [
+    {
+      "stage": "CLICK_AND_REFERRAL_RECRUITMENT",
+      "started_at": "2017-01-01T00:00:00+03:00",
+      "ended_at": "2017-07-24T00:00:00+03:00",
+      "first_documented_at": "2017-07-13T00:00:00+03:00",
+      "source_ids": [
+        "nw-publiclikes-2017-07-13"
+      ],
+      "note": "Users paid for account plans and earned for likes/referrals."
+    },
+    {
+      "stage": "PAYMENT_FAILURE_AND_COLLAPSE",
+      "started_at": "2017-07-24T00:00:00+03:00",
+      "ended_at": null,
+      "first_documented_at": "2017-07-25T00:00:00+03:00",
+      "source_ids": [
+        "kw-publiclikes-2017-07-25"
+      ],
+      "note": "Paybill suspension and complaints marked the collapse phase."
+    }
+  ],
+  "impact_estimates": [
+    {
+      "metric": "individual_reported_stuck_balance",
+      "value": 60000,
+      "unit": "KES",
+      "confidence": "medium",
+      "as_of": "2017-07-30T00:00:00+03:00",
+      "source_ids": [
+        "standard-publiclikes-2017-07-30"
+      ],
+      "note": "The Standard documented an example user with about KSh60,000 stuck; no reliable aggregate victim-loss figure is seeded yet."
+    }
+  ],
+  "legal_events": [],
+  "notes": [
+    "The widely circulated 'Sh2 trillion' figure in article headlines relates to broader global click-fraud estimates and is not treated as a Kenya Public Likes loss estimate."
+  ]
+}
