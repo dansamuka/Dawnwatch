@@ -1,0 +1,59 @@
+{
+  "control_id": "control-ke-britam-mmf",
+  "canonical_name": "Britam Money Market Fund",
+  "jurisdiction": "Kenya",
+  "control_type": "regulated_collective_investment_scheme",
+  "matched_patterns": [
+    "MASS_MARKET",
+    "MOBILE_ACCESS",
+    "RETURN_SEEKING",
+    "MONEY_MARKET"
+  ],
+  "expected_max_state": "WATCH",
+  "sources": [
+    {
+      "source_id": "cma-approved-cis-register-2026-09-24",
+      "source_name": "Capital Markets Authority Kenya — Approved Collective Investment Schemes register",
+      "source_tier": "A",
+      "url": "https://licensees.cma.or.ke/licenses/15/",
+      "published_at": null,
+      "observed_at": "2026-09-24T13:19:00+03:00",
+      "title": "Approved Collective Investment Schemes"
+    },
+    {
+      "source_id": "cma-britam-annual-report-2019",
+      "source_name": "Capital Markets Authority Resource Center / Britam annual report",
+      "source_tier": "A",
+      "url": "https://annualreport.cma.or.ke/media/INSURANCE/Britam%20Holdings%20Plc/documents/2019.pdf",
+      "published_at": null,
+      "observed_at": "2026-09-24T13:19:00+03:00",
+      "title": "Britam Holdings 2019 annual report"
+    }
+  ],
+  "verification_events": [
+    {
+      "observed_at": "2026-09-24T13:19:00+03:00",
+      "verification_type": "CURRENT_REGISTER_MATCH",
+      "source_ids": [
+        "cma-approved-cis-register-2026-09-24"
+      ],
+      "note": "Britam Money Market Fund appears in the CMA approved CIS register."
+    },
+    {
+      "observed_at": "2026-09-24T13:19:00+03:00",
+      "verification_type": "HISTORICAL_PRODUCT_DOCUMENTATION",
+      "source_ids": [
+        "cma-britam-annual-report-2019"
+      ],
+      "note": "CMA-hosted annual-report material documents the Britam Money Market Fund and mobile access."
+    }
+  ],
+  "positive_indicators": [
+    "VERIFIED_RELEVANT_LICENCE"
+  ],
+  "surface_risk_indicators": [],
+  "sample_marketing_text": "Save and invest in a money market fund and earn market-linked income while retaining convenient access to your investment.",
+  "notes": [
+    "Matched on mass retail savings language and mobile access, but the product is independently visible in the regulator register."
+  ]
+}
