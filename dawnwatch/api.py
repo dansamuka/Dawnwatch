@@ -1,5 +1,7 @@
 from fastapi import FastAPI
+from pydantic import BaseModel
 
+from dawnwatch.discovery import DiscoveryAnalysis, analyze_text
 from dawnwatch.models import RiskAssessment, RiskEvaluationRequest
 from dawnwatch.returns import ReturnAnalysis, ReturnClaim, analyze_return_claim
 from dawnwatch.risk_engine import METHODOLOGY_VERSION, WEIGHTS, evaluate
@@ -9,6 +11,10 @@ app = FastAPI(
     version="0.1.0",
     description="Mass Fraud Early Warning & Intelligence",
 )
+
+
+class TextDiscoveryRequest(BaseModel):
+    text: str
 
 
 @app.get("/health")
@@ -25,6 +31,11 @@ def methodology() -> dict[str, object]:
         ),
         "weights": {indicator.value: weight for indicator, weight in WEIGHTS.items()},
     }
+
+
+@app.post("/api/v1/discovery/analyze-text", response_model=DiscoveryAnalysis)
+def discovery_analyze_text(request: TextDiscoveryRequest) -> DiscoveryAnalysis:
+    return analyze_text(request.text)
 
 
 @app.post("/api/v1/risk/evaluate", response_model=RiskAssessment)
