@@ -32,6 +32,15 @@
       "url": "https://www.dci.go.ke/sites/default/files/2024-05/The%20DCI%20Magazine%20April%202024%209th%20Edition.pdf",
       "published_at": "2024-04-01T00:00:00+03:00",
       "title": "Cryptocurrency Fraud in Kenya / DCI Magazine"
+    },
+    {
+      "source_id": "people-daily-bitstream-2022-04-27",
+      "source_name": "People Daily",
+      "source_tier": "B",
+      "url": "https://peopledaily.digital/lifestyle/scammers-on-fake-sites-prey-on-crypto-traders",
+      "published_at": "2022-04-27T08:17:00+03:00",
+      "observed_at": "2022-04-27T08:17:00+03:00",
+      "title": "Scammers on fake sites prey on crypto traders"
     }
   ],
   "indicator_events": [
@@ -79,6 +88,16 @@
   ],
   "lifecycle_stages": [
     {
+      "stage": "PRE_COLLAPSE_WARNING_REFERENCED_LATER",
+      "started_at": null,
+      "ended_at": "2022-03-13T00:00:00+03:00",
+      "first_documented_at": "2022-04-27T08:17:00+03:00",
+      "source_ids": [
+        "people-daily-bitstream-2022-04-27"
+      ],
+      "note": "People Daily quoted a researcher saying Techspace Africa had warned about Bitstream a few weeks before collapse. The original warning date/source has not yet been recovered, so no pre-collapse indicator is admitted into replay."
+    },
+    {
       "stage": "RAPID_RECRUITMENT",
       "started_at": "2021-11-01T00:00:00+03:00",
       "ended_at": "2022-03-13T00:00:00+03:00",
@@ -114,6 +133,7 @@
   ],
   "legal_events": [],
   "notes": [
-    "A later source says Techspace Africa warned about Bitstream before collapse, but the original warning date has not yet been independently recovered; benchmark_eligible therefore remains false."
+    "A later source says Techspace Africa warned about Bitstream before collapse, but the original warning date has not yet been independently recovered; benchmark_eligible therefore remains false.",
+    "P1B explicitly records the existence of a referenced pre-collapse warning while withholding benchmark eligibility until the original dated source is recovered."
   ]
 }
