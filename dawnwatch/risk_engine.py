@@ -32,6 +32,7 @@ WEIGHTS: dict[IndicatorType, int] = {
     IndicatorType.VERIFIED_RELEVANT_LICENCE: -25,
     IndicatorType.VERIFIED_REGULATED_CUSTODY: -20,
     IndicatorType.AUTHORITATIVE_GOVERNMENT_FINDING: 45,
+    IndicatorType.VERIFIED_GOVERNMENT_ISSUER: -30,
 }
 
 
