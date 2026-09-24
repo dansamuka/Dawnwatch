@@ -1,9 +1,11 @@
 from datetime import datetime
+from typing import Annotated
 
 from fastapi import FastAPI, HTTPException, Query
 from pydantic import BaseModel
 
-from dawnwatch.archive import CaseSummary, default_archive
+from dawnwatch.archive import ArchiveStats, CaseSummary, default_archive
+from dawnwatch.benchmark import CaseBenchmark, benchmark_archive
 from dawnwatch.discovery import DiscoveryAnalysis, analyze_text
 from dawnwatch.history import HistoricalCase, replay_case
 from dawnwatch.models import RiskAssessment, RiskEvaluationRequest
@@ -39,13 +41,23 @@ def methodology() -> dict[str, object]:
     }
 
 
+@app.get("/api/v1/archive/stats", response_model=ArchiveStats)
+def archive_stats() -> ArchiveStats:
+    return archive.stats()
+
+
+@app.get("/api/v1/archive/benchmarks", response_model=list[CaseBenchmark])
+def archive_benchmarks() -> list[CaseBenchmark]:
+    return benchmark_archive(archive)
+
+
 @app.get("/api/v1/archive/cases", response_model=list[CaseSummary])
 def archive_cases() -> list[CaseSummary]:
     return archive.summaries()
 
 
 @app.get("/api/v1/archive/search", response_model=list[CaseSummary])
-def archive_search(q: str = Query(default="")) -> list[CaseSummary]:
+def archive_search(q: Annotated[str, Query()] = "") -> list[CaseSummary]:
     return archive.search(q)
 
 
